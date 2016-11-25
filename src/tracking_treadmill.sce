@@ -31,11 +31,11 @@ header = 5;                                     // Anzahl an Zeilen im Kopf
 data = csvRead(data_path, delimiter, [], [], [], regex_ignore, [], header);
 
 // Meta-Daten der Bilder
-nOfT = size(data,1) / max(data(:, 2))           // Number of Tracks
-nOfI = max(data(:, 2))                          // Number of Images per Track
+numberOfTracks = size(data,1) / max(data(:, 2))           // Number of Tracks
+numberOfImages = max(data(:, 2))                          // Number of Images per Track
 DELTA_T = 0.02;                                 // 50 FPS
 CALIBRATION = 300;                              // Pix per m is correct, get the cal ratio from user via dialog box
-Y_RESOLUTION = 576;                             // Höhe in Pixeln
+Y_RESOLUTION = 576 / 300;                             // Höhe in Pixeln
 
 // Kalibrieren
 data = data / CALIBRATION;
@@ -44,31 +44,31 @@ data = data / CALIBRATION;
 // Jeder Datensatz wird logisch in x und y Werte unterteilt
 // Gelenk.x und Gelenk.y enthalten jeweils eine 1 spaltige Matrix mit Koordinatenwerten
 // Multiplikation mit -1 der y-Werte um "natürliches Koordinatensystem" zu erhalten
-for i = 1 : nOfT                                 
+for i = 1 : numberOfTracks                                 
     if i == 1 then                
-        toes.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        toes.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        toes.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        toes.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     elseif i == 2 then
-        ankle.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        ankle.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        ankle.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        ankle.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     elseif i == 3 then
-        knee.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        knee.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        knee.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        knee.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     elseif i == 4 then
-        hip.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        hip.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        hip.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        hip.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     elseif i == 5 then
-        shoulder.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        shoulder.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        shoulder.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        shoulder.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     elseif i == 6 then
-        elbow.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        elbow.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        elbow.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        elbow.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     elseif i == 7 then
-        hand.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        hand.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        hand.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        hand.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     elseif i == 8 then
-        neck.x = data(nOfI*(i - 1) + 1:i*nOfI , 3);
-        neck.y = data(nOfI*(i - 1) + 1:i*nOfI , 4) * (-1) + Y_RESOLUTION;
+        neck.x = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 3);
+        neck.y = data(numberOfImages*(i - 1) + 1:i*numberOfImages , 4) * (-1) + Y_RESOLUTION;
     end
 end
 
