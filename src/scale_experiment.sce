@@ -23,6 +23,15 @@ yCalRaw = fscanfMat(yCalFile);
 zCalFile = '../data/Waage/Kalibrierung/ZKali_clean.txt';
 zCalRaw = fscanfMat(zCalFile);
 
+langsamFile = '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/langsam.txt';
+langsamRaw = fscanfMat(langsamFile);
+
+normalFile = '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/angenehm.txt';
+normalRaw = fscanfMat(normalFile);
+
+schnellFile = '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/schnell.txt';
+schnellRaw = fscanfMat(schnellFile);
+
 // FORMATTING OF THE FILE RAW FILE:
 //Channel
 //1 time
@@ -65,6 +74,20 @@ zCal(:,2) = zCalRaw(:,2) + zCalRaw(:,3);
 zCal(:,3) = zCalRaw(:,4) + zCalRaw(:,5);
 zCal(:,4) = zCalRaw(:,6) + zCalRaw(:,7) + zCalRaw(:,8) + zCalRaw(:,9);
 
+langsam(:,1) = langsamRaw(:,1);
+langsam(:,2) = langsamRaw(:,2) + langsamRaw(:,3);
+langsam(:,3) = langsamRaw(:,4) + langsamRaw(:,5);
+langsam(:,4) = langsamRaw(:,6) + langsamRaw(:,7) + langsamRaw(:,8) + langsamRaw(:,9);
+
+normal(:,1) = normalRaw(:,1);
+normal(:,2) = normalRaw(:,2) + normalRaw(:,3);
+normal(:,3) = normalRaw(:,4) + normalRaw(:,5);
+normal(:,4) = normalRaw(:,6) + normalRaw(:,7) + normalRaw(:,8) + normalRaw(:,9);
+
+schnell(:,1) = schnellRaw(:,1);
+schnell(:,2) = schnellRaw(:,2) + schnellRaw(:,3);
+schnell(:,3) = schnellRaw(:,4) + schnellRaw(:,5);
+schnell(:,4) = schnellRaw(:,6) + schnellRaw(:,7) + schnellRaw(:,8) + schnellRaw(:,9);
 
 // calculate linear regression of the scale
 [ scaleOffsetXSLOPE, scaleOffsetXOFFSET, scaleOffsetXSIGMA ]= reglin( offsetData(:,1)', offsetData(:,2)' );
@@ -93,3 +116,4 @@ kg = [0, 1, 3.6, 7.75]; // kalibrationsgewichte
 // plot(xCal(:,1), xCal(:,2))
 // plot(xCal(:,1)
 
+plot( langsam(:,1), (langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE )
