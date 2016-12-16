@@ -125,3 +125,8 @@ function [angSpeed]= CalcAngSpeed (proximalJoint, middleJoint, distalJoint)
     angSpeed = CentralDiff(angle, DELTA_T);
 endfunction
 
+function [changePos] = CUSUM(data, threshold)
+    sum = []
+    
+    
+endfunction
