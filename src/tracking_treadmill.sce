@@ -14,7 +14,8 @@ PI = 3.14;
 //********************************************
 
 // not sure what's the cleaner way, but i'll go with getd()
-getd("./")
+absolute_path = get_absolute_file_path('tracking_treadmill.sce')
+getd(absolute_path);
 //exec('./functions.sci');
 
 //********************************************
@@ -72,9 +73,16 @@ for i = 1 : numberOfTracks
     end
 end
 
-
+toes.speed = CalcSpeed(toes)
+disp(toes.speed.x)
+disp(toes.speed.y)
+toes.speed.x = MovingMean(toes.speed.x)
+toes.speed.x = MovingMean(toes.speed.y)
+disp(toes.speed.x)
+disp(toes.speed.y)
 
 plot (toes.x, toes.y, 'or');
+plot(toes.speed.x, toes.speed.y);
 // plot(knee.x,knee.y,'or'); // Plot x, y, ?
 
 //savetarget = uiputfile("*.txt*");

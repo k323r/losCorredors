@@ -34,7 +34,7 @@ endfunction
 // Übergabe: Struct mit 1 Spalte x und 1 Spalte y Werten
 // Rückgabe: Matrix mit 1 Spalte absoluten Werten
 function [scalarValues] = GetScalar(jointData)
-    for i = 0 : size(jointData.x, 1)
+    for i = 1 : size(jointData.x, 1)
         scalarValues(i) = sqrt(jointData.x(i)^2 + jointData.y(i)^2);
     end
 endfunction
@@ -48,7 +48,7 @@ function [movingMean] = MovingMean (values)
     movingMean(1) = values(1);
     endofdata = size(values,1)
     for i = 2 : endofdata - 1
-        movingMean = (values(i-1) + values(i) + values(i+1)) / 3;
+        movingMean(i) = (values(i-1) + values(i) + values(i+1)) / 3;
     end
     movingMean(endofdata) = values(endofdata);
 endfunction
@@ -61,7 +61,7 @@ function [weightedMovingMean] = WeightedMovingMean (values, weightA, weightB, we
     weightedMovingMean(1) = values(1);
     endofdata = size(values,1)
     for i = 2 : endofdata - 1
-        weightedMovingMean = (values(i-1) * weightA + values(i) * weightB + values(i+1) * weightC) / (weightA + weightB + weightC);
+        weightedMovingMean(i) = (values(i-1) * weightA + values(i) * weightB + values(i+1) * weightC) / (weightA + weightB + weightC);
     end
     weightedMovingMean(endofdata) = values(endofdata);
 endfunction
@@ -124,4 +124,5 @@ function [angSpeed]= CalcAngSpeed (proximalJoint, middleJoint, distalJoint)
     angle = CalcAngle(proximalJoint, middleJoint, distalJoint);
     angSpeed = CentralDiff(angle, DELTA_T);
 endfunction
+
 
