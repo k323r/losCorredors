@@ -66,6 +66,28 @@ function [weightedMovingMean] = WeightedMovingMean (values, weightA, weightB, we
     weightedMovingMean(endofdata) = values(endofdata);
 endfunction
 
+function [weightedMovingMean] = WeightedMovingMean2 (values, weightA, weightB, weightC)
+    weightedMovingMean(1) = values(1);
+    endofdata = size(values,1)
+    for i = 2 : endofdata - 1
+        weightedMovingMean(i) = (values(i-1) * weightA + values(i) * weightB + values(i+1) * weightC) / (weightA + weightB + weightC);
+    end
+    weightedMovingMean(endofdata) = values(endofdata);
+    weightedMovingMean = weightedMovingMean.'
+endfunction
+
+function [weightedMovingMean] = WeightedMovingMean4 (values, weightA, weightB, weightC, weightD, weightE)
+    weightedMovingMean(1) = values(1);
+    weightedMovingMean(2) = values(2);
+    endofdata = size(values,1);
+    for i = 3 : endofdata - 2
+        weightedMovingMean(i) = (values(i - 2) * weightA + values(i - 1) * weightB + values(i) * weightC + values(i + 1) * weightD + values(i + 2) * weightE) / (weightA + weightB + weightC + weightD + weightE);
+    end
+    weightedMovingMean(endofdata - 1) = values(endofdata - 1);
+    weightedMovingMean(endofdata) = values(endofdata);
+    weightedMovingMean = weightedMovingMean.'
+endfunction
+
 // Abstand zwischen zwei Punkten über Satz des Pythagoras
 // Übergabe: Zwei 2 Spaltige Matrizen
 // Rückgabe: Eine 1 Spaltige Matrix mit Skalaren Entfernungswerten
