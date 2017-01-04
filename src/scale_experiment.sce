@@ -1,13 +1,18 @@
 // CLEAR PATH
 clear();
 clearglobal();
-
 // LOAD Functions
-getd('./');
+//cd('/Users/felix/Documents/Studium/Master/Sem3/Loko/losCorredors/src/')
+absolute_path = get_absolute_file_path('scale_experiment.sce')
+getd(absolute_path);
 
 // get path to the offset measurement file:
 // driftfile = uigetfile();
 // /home/asander/Projekte/losCorredors/data/Waage/Kraftmessungen_Loko_WS16
+
+absolute_path = get_absolute_file_path('scale_experiment.sce')
+file = uigetfile();
+offsetDataRaw = fscanfMat(file);
 
 driftfile = '../data/Waage/Kalibrierung/Waagendrift_clean.txt';
 offsetDataRaw = fscanfMat(driftfile);
