@@ -23,7 +23,10 @@ getd(absolute_path);
 //********************************************
 
 // Öffnendialog starten
-data_path = uigetfile("*.*","","Select CSV data",%t);
+//data_path = uigetfile("*.*","","Select CSV data",%t);
+
+data_path = absolute_path + "/../data/aljoscha/5_kmh.mdf"
+
 
 // Einlesen der Daten
 delimiter = " ";                                // Ist klar
