@@ -116,12 +116,31 @@ kg = [0, 1, 3.6, 7.75]; // kalibrationsgewichte
 // plot(xCal(:,1), xCal(:,2))
 // plot(xCal(:,1)
 
-time = langsam(:,1)
-Z_clean = WeightedMovingMean2(((langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.5, 0.75, 0.5)
-Z_clean2 = WeightedMovingMean2(((langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 1, 1, 1)
-Z_clean4 = WeightedMovingMean4(((langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+langsamSmooth.t = langsam(:,1)
+langsamSmooth.x = WeightedMovingMean4(((langsam(:,2) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+langsamSmooth.y = WeightedMovingMean4(((langsam(:,3) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+langsamSmooth.z = WeightedMovingMean4(((langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
 
-plot( time, (langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE, 'r' )
-plot( time, Z_clean, 'g' )
-plot( time, Z_clean2, 'b')
-plot( time, Z_clean4, 'y')
+normalSmooth.t = normal(:,1)
+normalSmooth.x = WeightedMovingMean4(((normal(:,2) - (normal(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+normalSmooth.y = WeightedMovingMean4(((normal(:,3) - (normal(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+normalSmooth.z = WeightedMovingMean4(((normal(:,4) - (normal(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+
+schnellSmooth.t = schnell(:,1)
+schnellSmooth.x = WeightedMovingMean4(((schnell(:,2) - (schnell(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+schnellSmooth.y = WeightedMovingMean4(((schnell(:,3) - (schnell(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+schnellSmooth.z = WeightedMovingMean4(((schnell(:,4) - (schnell(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 0.25, 0.5, 0.75, 0.5, 0.25)
+
+
+//plot( time, (langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE, 'r' )
+//plot( time, Z_clean, 'g' )
+//plot( time, Z_clean2, 'b')
+//plot( time, Z_clean4, 'y')
+
+plot(langsamSmooth.t, langsamSmooth.x, 'r')
+plot(langsamSmooth.t, ((langsam(:,2) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 'r')
+plot(langsamSmooth.t, langsamSmooth.y, 'g')
+plot(langsamSmooth.t, ((langsam(:,3) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 'g')
+plot(langsamSmooth.t, langsamSmooth.z, 'b')
+plot(langsamSmooth.t, ((langsam(:,4) - (langsam(:,1) * scaleOffsetXSLOPE + scaleOffsetZOFFSET  )) * scaleVoltageZSLOPE), 'b')
+
