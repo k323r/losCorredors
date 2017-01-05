@@ -46,6 +46,8 @@ trunk = anal(trunk)
 
 // smooth data
 
+
+
 // PLOT DATA
 
 drawStickFigure()
