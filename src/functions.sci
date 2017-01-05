@@ -121,7 +121,7 @@ function [angle] = CalcAngle(proximalJoint, middleJoint, distalJoint)
     //end
 endfunction
 
-function [angle] = lawOfCosines(A, B, C)
+function [angle] = LawOfCosines(A, B, C)
     aT = GetLimbLength(B, C)
     bT = GetLimbLength(A, C)
     cT = GetLimbLength(A, B)
