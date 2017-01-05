@@ -85,7 +85,7 @@ function [weightedMovingMean] = WeightedMovingMean4 (values, weightA, weightB, w
     end
     weightedMovingMean(endofdata - 1) = values(endofdata - 1);
     weightedMovingMean(endofdata) = values(endofdata);
-    weightedMovingMean = weightedMovingMean.'
+    //weightedMovingMean = weightedMovingMean.'
 endfunction
 
 // Abstand zwischen zwei Punkten über Satz des Pythagoras
@@ -95,6 +95,30 @@ function [limbLength] = GetLimbLength (proximalJoint, distalJoint)
         dx = distalJoint.x(i) - proximalJoint.x(i);
         dy = distalJoint.y(i) - proximalJoint.y(i);
         limbLength(i) = sqrt((dx)^2 + (dy)^2);
+endfunction
+
+function [cusumSumPos] = posCUSUM (values, threshold)
+    cusumSumPos (1) = 0
+    len = size(values,1)
+    for i = 2 : len
+        cusumSumPos(i) = max(0, cusumSumPos(i - 1) + values(i) - threshold)
+    end
+endfunction
+
+function [cusumSumNeg] = negCUSUM (values, threshold)
+    cusumSumNeg (1) = 0
+    len = size(values,1)
+    for i = 2 : len
+        cusumSumNeg(i) = -1 * min(0, -1*(cusumSumNeg(i - 1) - values(i) + threshold))
+    end
+endfunction
+
+function [cusumSum] = CUSUM (values, threshold)
+    cusumSum(1) = 0
+    len = size(values,1)
+    for i = 2 : len
+        cusumSum(i) = cusumSum(i - 1) + values(i) - threshold
+    end
 endfunction
 
 //********************************************
@@ -145,10 +169,4 @@ endfunction
 function [angSpeed]= CalcAngSpeed (proximalJoint, middleJoint, distalJoint)
     angle = CalcAngle(proximalJoint, middleJoint, distalJoint);
     angSpeed = CentralDiff(angle, DELTA_T);
-endfunction
-
-function [changePos] = CUSUM(data, threshold)
-    sum = []
-    
-    
 endfunction
