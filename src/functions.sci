@@ -70,9 +70,11 @@ endfunction
 // Übergabe: Zwei 2 Spaltige Matrizen
 // Rückgabe: Eine 1 Spaltige Matrix mit Skalaren Entfernungswerten
 function [limbLength] = GetLimbLength (proximalJoint, distalJoint)
+    for i = 1 : size(proximalJoint.x, 1)
         dx = distalJoint.x(i) - proximalJoint.x(i);
         dy = distalJoint.y(i) - proximalJoint.y(i);
         limbLength(i) = sqrt((dx)^2 + (dy)^2);
+    end
 endfunction
 
 //********************************************
@@ -86,8 +88,8 @@ function [CoM] = CalcCoM(proximalJoint, distalJoint, anthrof)
     for i = 1 : size(proximalJoint.x,1)
         dx = distalJoint.x(i) - proximalJoint.x(i);
         dy = distalJoint.y(i) - proximalJoint.y(i);
-        CoM(i, 1) = dx * anthrof + proximalJoint.x(i);
-        CoM(i, 2) = dy * anthrof + proximalJoint.y(i);
+        CoM.x(i) = dx * anthrof + proximalJoint.x(i);
+        CoM.y(i) = dy * anthrof + proximalJoint.y(i);
     end
 endfunction
 
@@ -114,8 +116,26 @@ function [angle] = CalcAngle(proximalJoint, middleJoint, distalJoint)
     dyProx = proximalJoint.y - middleJoint.y;
     dxDist = middleJoint.x - distalJoint.x;
     dyDist = middleJoint.y - distalJoint.y;
-    angle = (atan(dyProx, dxProx) + atan(dxDist, dyDist)) / (2 * PI) * 180;
+    angle = (atan(dyProx, dxProx) - atan(dxDist, dyDist)) * 180 / PI;
+    //if angle > 180 then angle = 360 - angle
+    //end
 endfunction
+
+function [angle] = lawOfCosines(A, B, C)
+    aT = GetLimbLength(B, C)
+    bT = GetLimbLength(A, C)
+    cT = GetLimbLength(A, B)
+    for i = 1 : size(aT, 1)
+        a = aT(i)
+        b = bT(i)
+        c = cT(i)
+        angle(i) = acos((b*b - a*a - c*c) / (-2 * a * c)) * 180 / PI
+    end
+  
+endfunction
+
+
+
 
 // Winkelgeschwindigkeit am mittleren Gelenk von drei übergebenen Gelenken
 // Übergabe: Drei 2 spaltige Matrizen mit Koordinaten
