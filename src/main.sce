@@ -1,16 +1,20 @@
 clear(); // Löschen aller Variablen
 clearglobal(); // Löschen aller globalen Variablen
 
-global PI = 3.14;
+global PI
+PI = 3.1415
+
+global DELTA_T
+DELTA_T = 0.02
 
 cwd = get_absolute_file_path('main.sce')
 getd(cwd);
 
 // GET DATA PATH
-//data_path = uigetfile(["*.mdf", "Output from ImageJ"], cwd + "/../data/","Select CSV data",%t);
+// data_path = uigetfile(["*.mdf", "Output from ImageJ"], cwd + "/../data/","Select CSV data",%t);
 
 // For testing only
-data_path = cwd + "/../data/aljoscha/5_kmh.mdf"
+data_path = cwd + "/../data/Laufen/aljoscha/5_kmh.mdf"
 
 // READ DATA
 
@@ -23,7 +27,7 @@ ankle.speed = CalcSpeed(ankle)
 knee.speed = CalcSpeed(knee)
 hip.speed = CalcSpeed(hip)
 shoulder.speed = CalcSpeed(shoulder)
-arm.speed = CalcSpeed(arm)
+elbow.speed = CalcSpeed(elbow)
 hand.speed = CalcSpeed(hand)
 neck.speed = CalcSpeed(neck)
 
