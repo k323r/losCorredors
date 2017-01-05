@@ -16,7 +16,7 @@ getd(cwd);
 // data_path = uigetfile(["*.mdf", "Output from ImageJ"], cwd + "/../data/","Select CSV data",%t);
 
 // For testing only
-data_path = cwd + "/../data/Laufen/felix/laufband/4/4.mdf"
+data_path = cwd + "/../data/Laufen/felix/4/4.mdf"
 
 // READ DATA
 
@@ -35,21 +35,20 @@ disp(Lauf_T)
 
 // ANALYZE DATA
 
-toes.speed = CalcSpeed(toes)
-ankle.speed = CalcSpeed(ankle)
-knee.speed = CalcSpeed(knee)
-hip.speed = CalcSpeed(hip)
-shoulder.speed = CalcSpeed(shoulder)
-elbow.speed = CalcSpeed(elbow)
-hand.speed = CalcSpeed(hand)
-neck.speed = CalcSpeed(neck)
-
+foot = anal(foot)
+leg = anal(leg)
+thigh = anal(thigh)
+leg_total = anal(leg_total)
+upperarm = anal(upperarm)
+forearm = anal(forearm)
+arm_total = anal(arm_total)
+trunk = anal(trunk)
 
 // smooth data
 
 // PLOT DATA
 
-//drawStickFigure()
+drawStickFigure()
 
 // Leon writes functions
 

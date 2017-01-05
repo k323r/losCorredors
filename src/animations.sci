@@ -7,7 +7,7 @@ function drawStickFigure()
     h_stick = e.children;
     
     a = gca();
-    a.data_bounds=[0,0;2,2];
+    a.data_bounds=[1,0;3,2];
     
     for i = 1 : size(toes.x,1)
         drawlater

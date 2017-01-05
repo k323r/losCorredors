@@ -145,4 +145,9 @@ function [angSpeed]= CalcAngSpeed (proximalJoint, middleJoint, distalJoint)
     angSpeed = CentralDiff(angle, DELTA_T);
 endfunction
 
+function [limb] = anal(limb)
+    limb.speed = CalcSpeed(limb)
+    limb.acc = CalcAcceleration(limb)
+endfunction
+
 
