@@ -148,6 +148,9 @@ endfunction
 function [limb] = anal(limb)
     limb.speed = CalcSpeed(limb)
     limb.acc = CalcAcceleration(limb)
+    limb.absspeed = GetScalar(limb.speed)
+    limb.absacc = GetScalar(limb.acc)
+    limb.smoothspeed = MovingMean(MovingMean(limb.absspeed))
 endfunction
 
 

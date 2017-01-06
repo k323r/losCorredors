@@ -11,7 +11,7 @@ function [toes, ankle, knee, hip, shoulder, elbow, hand, neck] = readFromMDF(pat
 delimiter = " ";                                // Ist klar
 regex_ignore = '/(Track).*$/';                  // Löschen aller mit "Track" beginnenden Zeilen
 header = 5;                                     // Anzahl an Zeilen im Kopf
-data = csvRead(data_path, delimiter, [], [], [], regex_ignore, [], header);
+data = csvRead(path, delimiter, [], [], [], regex_ignore, [], header);
 
 // Meta-Daten der Bilder
 numberOfTracks = size(data,1) / max(data(:, 2))           // Number of Tracks
@@ -70,6 +70,28 @@ function  [foot, leg, thigh, leg_total, upperarm, forearm, arm_total, trunk] = c
     forearm = CalcCoM(elbow, hand, 0.430)
     arm_total = CalcCoM(shoulder, hand, 0.5) // Nicht ganz richtig, da anthro Daten zwischen Ellenbogen und Finger anliegen
     trunk = CalcCoM(shoulder, hip, 0.5)
+    
+    // Add names
+    
+    foot.name = "foot"
+    leg.name = "leg"
+    thigh.name = "thigh"
+    leg_total.name = "total leg"
+    upperarm.name = "upper arm"
+    forearm.name = "forearm"
+    arm_total.name = "total arm"
+    trunk.name = "trunk"
+    
+    // Add colors
+    
+    foot.color = color("red")
+    leg.color = color("green")
+    thigh.color = color("blue")
+    leg_total.color = color("purple")
+    upperarm.color = color("orange")
+    forearm.color = color("darkgreen")
+    arm_total.color = color("brown")
+    trunk.color = color("yellow")
     
     // Add masses
     
