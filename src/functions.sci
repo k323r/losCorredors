@@ -66,17 +66,6 @@ function [weightedMovingMean] = WeightedMovingMean (values, weightA, weightB, we
     weightedMovingMean(endofdata) = values(endofdata);
 endfunction
 
-function [weightedMovingMean] = WeightedMovingMean4 (values, weightA, weightB, weightC, weightD, weightE)
-    weightedMovingMean(1) = values(1);
-    weightedMovingMean(2) = values(2);
-    endofdata = size(values,1);
-    for i = 3 : endofdata - 2
-        weightedMovingMean(i) = (values(i - 2) * weightA + values(i - 1) * weightB + values(i) * weightC + values(i + 1) * weightD + values(i + 2) * weightE) / (weightA + weightB + weightC + weightD + weightE);
-    end
-    weightedMovingMean(endofdata - 1) = values(endofdata - 1);
-    weightedMovingMean(endofdata) = values(endofdata);
-endfunction
-
 // Abstand zwischen zwei Punkten über Satz des Pythagoras
 // Übergabe: Zwei 2 Spaltige Matrizen
 // Rückgabe: Eine 1 Spaltige Matrix mit Skalaren Entfernungswerten
@@ -85,30 +74,6 @@ function [limbLength] = GetLimbLength (proximalJoint, distalJoint)
         dx = distalJoint.x(i) - proximalJoint.x(i);
         dy = distalJoint.y(i) - proximalJoint.y(i);
         limbLength(i) = sqrt((dx)^2 + (dy)^2);
-    end
-endfunction
-
-function [cusumSumPos] = posCUSUM (values, threshold)
-    cusumSumPos (1) = 0
-    len = size(values,1)
-    for i = 2 : len
-        cusumSumPos(i) = max(0, cusumSumPos(i - 1) + values(i) - threshold)
-    end
-endfunction
-
-function [cusumSumNeg] = negCUSUM (values, threshold)
-    cusumSumNeg (1) = 0
-    len = size(values,1)
-    for i = 2 : len
-        cusumSumNeg(i) = -1 * min(0, -1*(cusumSumNeg(i - 1) - values(i) + threshold))
-    end
-endfunction
-
-function [cusumSum] = CUSUM (values, threshold)
-    cusumSum(1) = 0
-    len = size(values,1)
-    for i = 2 : len
-        cusumSum(i) = cusumSum(i - 1) + values(i) - threshold
     end
 endfunction
 
@@ -180,7 +145,6 @@ function [angSpeed]= CalcAngSpeed (proximalJoint, middleJoint, distalJoint)
     angSpeed = CentralDiff(angle, DELTA_T);
 endfunction
 
-
 function [limb] = anal(limb)
     limb.speed = CalcSpeed(limb)
     limb.acc = CalcAcceleration(limb)
@@ -188,4 +152,5 @@ function [limb] = anal(limb)
     limb.absacc = GetScalar(limb.acc)
     limb.smoothspeed = MovingMean(MovingMean(limb.absspeed))
 endfunction
+
 
