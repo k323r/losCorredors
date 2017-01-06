@@ -153,4 +153,9 @@ function [limb] = anal(limb)
     limb.smoothspeed = MovingMean(MovingMean(limb.absspeed))
 endfunction
 
-
+function calculateAllAngles()
+    ankle.angle = LawOfCosines(knee, ankle, toes)
+    knee.angle = LawOfCosines(hip, knee, ankle)
+    hip.angle = LawOfCosines(shoulder, hip, knee)
+    elbow.angle = LawOfCosines(shoulder, elbow, hand)   
+endfunction
