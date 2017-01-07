@@ -36,12 +36,24 @@ difference = []
 
 // Set up figures
 
+// Figure 1: Compare Angles of all Speeds in one Graph
 angleComparison = scf(9)
 acax = angleComparison.children
 acax.title.text = "Vergleich der Winkelverläufe am Knie"
 acax.x_label.text = "Schrittzyklus"
 acax.y_label.text = "Winkel in Grad"
 
+// Figure 2: Create One Graph for each velocity, plot different Joints
+figures = []
+axes = []
+
+for i = 1 : size(data_path, 2)
+    figures(i) = scf(i)
+    axes(i) = figures(i).children
+    axes(i).title.text = "Title"
+    axes(i).x_label.text = "Schrittzyklus"
+    axes(i).y_label.text = "Irgendwas"
+end
 
 
 
@@ -67,9 +79,7 @@ for i = 1 : size(data_path, 2)
     cycleTime(i) = Cycle_T
     frequency(i) = 1 / Cycle_T
     difference(i) = Pendulum_T / Cycle_T * 100 - 100
-    
-    
-    
+       
     // ANALYZE DATA
     
     joints = [toes, ankle, knee, hip, shoulder, elbow, hand, neck]
@@ -99,10 +109,17 @@ for i = 1 : size(data_path, 2)
     
     time = linspace(0, Cycle_T, timesteps)
     
+    // Figure 1: Compare Angles of all Speeds in one Graph
     sca(acax)
     plot2d(time / Cycle_T, knee.angle, style = colors(i))
+    xs2svg(gcf(), savedir + "/angles.svg", 'landscape')
+    xs2png(gcf(), savedir + "/angles.png")
     
-  
+    // Figure 2: Create One Graph for each velocity, plot different Joints
+    sca(axes(i))
+    plot2d(time / Cycle_T, [foot.smoothspeed, leg.smoothspeed, thigh.smoothspeed], style=[foot.color, leg.color, thigh.color])
+    axes(i).title.text = speeds(i)
+    xs2pdf(gcf(), savedir + "/" + foot.name + string(i) + ".pdf")
     // drawStickFigure()
     
     sleep(1000)
@@ -117,61 +134,6 @@ fprintfMat(savedir + "/pendulum.txt",...
            "Idealpendel_T Beinpendel_T Beinpendel_f rel_diff");
 
 
-
-
-
-function plotTrajectory(joint)
-        // plot x - y curve of joint
-endfunction
-    
-function plotKinematics(limb)
-        
-endfunction
-
-
-function plotAngles(i)
-    scf(i)
-    ax(i) = newaxes()
-    plot2d(time / Cycle_T, [ankle.angle,knee.angle,  hip.angle, elbow.angle], style=[color("red"), color("green"), color("blue"), color("purple")]) //,
-    ax(i).title.text = "Winkelverläufe, Geschwindigkeit " + speeds(i)
-    ax(i).x_label.text = "Entdimensionierter Schrittzyklus"
-    ax(i).y_label.text = "Winkel in Grad"
-    h1 = legend(["Sprunggelenk", "Kniegelenk", "Hüfte", "Ellenbogen"], [-1], [%t])
-endfunction
-// Leon writes functions
-
-// Statistics? Correlation
-
-// WRITE RESULTS
-
-    
-function saveResults(joints, savetarget)
-    
-    for i = 1 : joints(size, 1)
-        fprintfMat(savetarget, [joints(i).smoothspeed, joints(i).absacc]); // Speichern fprintfMat(Zielpfad, Daten)
-    end
-endfunction    
-    
-    
-function plotSpeeds()
-    scf(10)
-    ax = gca()
-    
-    
-    for j = 1 : size(limbs, 2)
-    subplot(size(limbs, 2), 1, j);
-                
-        plot2d(time / Cycle_T, limbs(j).smoothspeed);    //nowcolor]);
-        ax2 = gca()
-        e = gce()
-        graph = e.children(1)
-        graph.foreground = limbs(j).color
-        ax2.title.text = limbs(j).name
-    end
-endfunction
-
-    
-    
     
     
 // Make results directory
