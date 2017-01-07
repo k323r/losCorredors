@@ -145,9 +145,12 @@ function [forcesRaw] = readScaleFile (filepath)
     forcesRaw = data( index:length(data(:,1)),: ) // -> no wonder no one likes matlab/scilab! wtf is this shit
 endfunction
 
-function [forces] = combineChannels (data)
+function [forces] = combineChannels (data, a, b, CoB)
     forces(:,1) = data(:,1);
     forces(:,2) = data(:,2) + data(:,3);
     forces(:,3) = data(:,4) + data(:,5);  
     forces(:,4) = data(:,6) + data(:,7) + data(:,8) + data(:,9);
+endfunction
+function [forces] = combineChannels (data)
+    forces(:,5) = (( data(:,6) + data(:,7) ) / ( data(:,6) + data(:,7) + data(:,8) + data(:,9) ))*2*b - b + CoB
 endfunction
