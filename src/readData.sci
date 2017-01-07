@@ -151,6 +151,3 @@ function [forces] = combineChannels (data, a, b, CoB)
     forces(:,3) = data(:,4) + data(:,5);  
     forces(:,4) = data(:,6) + data(:,7) + data(:,8) + data(:,9);
 endfunction
-function [forces] = combineChannels (data)
-    forces(:,5) = (( data(:,6) + data(:,7) ) / ( data(:,6) + data(:,7) + data(:,8) + data(:,9) ))*2*b - b + CoB
-endfunction
