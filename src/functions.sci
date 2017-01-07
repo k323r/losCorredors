@@ -229,7 +229,7 @@ function [offset] = getOffset (data)
     offset.z = mean(data(400:500,4))
 endfunction
 
-function [smoothData] = smoothenData (data, scaledrift, voltageToForce)
+function [smoothData] = calculateForces (data, scaledrift, voltageToForce)
     
     offsetX = mean(data(100:200,2))
     offsetY = mean(data(100:200,3)) 

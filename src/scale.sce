@@ -13,6 +13,13 @@ T = 4
 global S_TIME
 S_TIME = 3.20
 
+global a
+a = 0.03
+global b
+b = 0.0575
+global CoB
+CoB = b
+
 getd('./');
 
 driftfile = '../data/Waage/Kalibrierung/Waagendrift_clean.txt';
@@ -30,20 +37,20 @@ normalRaw = readScaleFile(normalFile);
 schnellFile = '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/schnell.txt';
 schnellRaw = readScaleFile(schnellFile);
 
-offsetData = combineChannels(offsetDataRaw)
-xCal = combineChannels(xCalRaw)
-yCal = combineChannels(yCalRaw)
-zCal = combineChannels(zCalRaw)
-langsam = combineChannels(langsamRaw)
-normal = combineChannels(normalRaw)
-schnell = combineChannels(schnellRaw)
+offsetData = combineChannels(offsetDataRaw, a, b, CoB)
+xCal = combineChannels(xCalRaw, a, b, CoB)
+yCal = combineChannels(yCalRaw, a, b, CoB)
+zCal = combineChannels(zCalRaw, a, b, CoB)
+langsam = combineChannels(langsamRaw, a, b, CoB)
+normal = combineChannels(normalRaw, a, b, CoB)
+schnell = combineChannels(schnellRaw, a, b, CoB)
 
 scaledrift = calcScaleDrift(offsetData)
 voltageToForce = convertVoltageToForce(xCal, yCal, zCal)
 
-langsamSmooth = smoothenData(langsam, scaledrift, voltageToForce)
-normalSmooth = smoothenData(normal, scaledrift, voltageToForce)
-schnellSmooth = smoothenData(schnell, scaledrift, voltageToForce)
+langsamSmooth = calculateForces(langsam, scaledrift, voltageToForce)
+normalSmooth = calculateForces(normal, scaledrift, voltageToForce)
+schnellSmooth = calculateForces(schnell, scaledrift, voltageToForce)
 
 plotForces(langsamSmooth, 0, "langsam", [1366,768])
 plotForces(normalSmooth, 1, "normal", [1366,768])
