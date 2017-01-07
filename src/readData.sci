@@ -4,7 +4,6 @@
 
 // Öffnendialog starten
 
-
 function [toes, ankle, knee, hip, shoulder, elbow, hand, neck] = readFromMDF(path)
 
 // Einlesen der Daten
@@ -135,4 +134,20 @@ function  [foot, leg, thigh, leg_total, upperarm, forearm, arm_total, trunk] = c
     forearm.MoI = forearm.mass * forearm.RoG^2
     arm_total.MoI = arm_total.mass * arm_total.RoG^2
 
+endfunction
+
+function [forcesRaw] = readScaleFile (filepath)
+    data = fscanfMat(filepath);
+    index = 1
+    while data(index,1) < 3.20
+        index = index + 1
+    end
+    forcesRaw = data( index:length(data(:,1)),: ) // -> no wonder no one likes matlab/scilab! wtf is this shit
+endfunction
+
+function [forces] = combineChannels (data, a, b, CoB)
+    forces(:,1) = data(:,1);
+    forces(:,2) = data(:,2) + data(:,3);
+    forces(:,3) = data(:,4) + data(:,5);  
+    forces(:,4) = data(:,6) + data(:,7) + data(:,8) + data(:,9);
 endfunction
