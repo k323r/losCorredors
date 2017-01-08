@@ -1,0 +1,46 @@
+\documentclass{scrartcl}% siehe <http://www.komascript.de>
+\usepackage{selinput}% Eingabecodierung automatisch ermitteln …
+\SelectInputMappings{% … siehe <http://ctan.org/pkg/selinput>
+  adieresis={ä},
+  germandbls={ß},
+}
+\usepackage[ngerman]{babel}% Das Beispieldokument ist in Deutsch,
+                % daher wird mit Hilfe des babel-Pakets
+                % über Option ngerman auf deutsche Begriffe
+                % und gleichzeitig Trennmuster nach den
+                % aktuellen Rechtschreiberegeln umgeschaltet.
+                % Alternativen und weitere Sprachen sind
+                % verfügbar (siehe <http://ctan.org/pkg/babel>).
+                
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\begin{document}
+% ----------------------------------------------------------------------------
+% Titel (erst nach \begin{document}, damit babel bereits voll aktiv ist:
+\titlehead{Kopf über dem Titel mit Leerstuhl u.\,ä.}% optional
+\subject{Praktikumsbericht}% optional
+\title{Ganganalyse des Menschen}% obligatorisch
+\subtitle{Untertitel}% optional
+\author{Vincent E. Focke}% obligatorisch
+\date{Abgabe: 27.01.2017}% sinnvoll
+\publishers{Betreuer: Nils Owsianowski \\ Leitung: Antonia B. Kesel}% optional
+\maketitle% verwendet die zuvor gemachte Angaben zur Gestaltung eines Titels
+% ----------------------------------------------------------------------------
+% Inhaltsverzeichnis:
+\tableofcontents
+% ----------------------------------------------------------------------------
+% Gliederung und Text:
+\section{Einleitung}
+\label{sec:motivation}
+Dieser Abschnitt sollte sich mit der Aufgabenstellung befassen. Er kann auch
+Grundlagen behandeln. Es kann jedoch sinnvoll sein, für die Grundlagen einen
+heißt das, dass dies nicht geht SCheiße Fuß
+eigenen Abschnitt zu verwenden.
+\section{Durchführung}
+\label{sec:durchfuehrung}
+Hier erzählt man nun, was man alles gemacht hat.
+\section{Schluss}
+\label{sec:schluss}
+Hierher gehört das Fazit und ggf. der Ausblick auf weitere Dinge, die getan
+werden könnten.
+\end{document}
