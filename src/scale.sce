@@ -20,21 +20,24 @@ b = 0.0575
 global CoB
 CoB = b
 
-getd('./');
+cwd = get_absolute_file_path('scale.sce')
+getd(cwd);
 
-driftfile = '../data/Waage/Kalibrierung/Waagendrift_clean.txt';
+
+
+driftfile = cwd + '../data/Waage/Kalibrierung/Waagendrift_clean.txt';
 offsetDataRaw = readScaleFile(driftfile);
-xCalFile = '../data/Waage/Kalibrierung/XKali_clean.txt';
+xCalFile = cwd + '../data/Waage/Kalibrierung/XKali_clean.txt';
 xCalRaw = readScaleFile(xCalFile)
-yCalFile = '../data/Waage/Kalibrierung/YKali_clean.txt';
+yCalFile = cwd + '../data/Waage/Kalibrierung/YKali_clean.txt';
 yCalRaw = readScaleFile(yCalFile);
-zCalFile = '../data/Waage/Kalibrierung/ZKali_clean.txt';
+zCalFile = cwd + '../data/Waage/Kalibrierung/ZKali_clean.txt';
 zCalRaw = readScaleFile(zCalFile);
-langsamFile = '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/langsam.txt';
+langsamFile = cwd + '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/langsam.txt';
 langsamRaw = readScaleFile(langsamFile)
-normalFile = '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/angenehm.txt';
+normalFile = cwd + '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/angenehm.txt';
 normalRaw = readScaleFile(normalFile);
-schnellFile = '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/schnell.txt';
+schnellFile = cwd + '../data/Waage/Kraftmessungen_Loko_WS16/Aljoscha/schnell.txt';
 schnellRaw = readScaleFile(schnellFile);
 
 offsetData = combineChannels(offsetDataRaw, a, b, CoB)

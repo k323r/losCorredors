@@ -263,3 +263,42 @@ function plotForces (data, num, title, resolution )
     xs2svg(plotHandle, title+'.svg')
 endfunction
 
+
+function [grfSum] = calculateGRF(cwd, startfrom, CoB)
+
+    a = 0.03
+    b = 0.0575
+    
+    caldir = uigetdir(cwd + "../data/")
+    forcefile = uigetfile("*.txt*", cwd + "../data/", "Select force measurement",%t)
+    
+    driftfile = caldir + '/Waagendrift_clean.txt';
+    offsetDataRaw = readScaleFile(driftfile);
+    xCalFile = caldir + '/XKali_clean.txt';
+    xCalRaw = readScaleFile(xCalFile)
+    yCalFile = caldir + '/YKali_clean.txt';
+    yCalRaw = readScaleFile(yCalFile);
+    zCalFile = caldir + '/ZKali_clean.txt';
+    zCalRaw = readScaleFile(zCalFile);
+    
+    grfRaw = readScaleFile(forcefile)
+    
+    
+    offsetData = combineChannels(offsetDataRaw, a, b, CoB)
+    xCal = combineChannels(xCalRaw, a, b, CoB)
+    yCal = combineChannels(yCalRaw, a, b, CoB)
+    zCal = combineChannels(zCalRaw, a, b, CoB)
+    grfSum = combineChannels(grfRaw, a, b, CoB)
+    
+    
+//    scaledrift = calcScaleDrift(offsetData)
+//    voltageToForce = convertVoltageToForce(xCal, yCal, zCal)
+//    
+//    grf = calculateForces(grfSum, scaledrift, voltageToForce)
+    
+//     Extract Force Data, start from user chosen point, increment of 2 to match force balance sampling (100 hz) with camera fps (50 hz)
+//    grf.Fx = grfSum(startfrom:2:,3)
+//    grf.Fy = grfSum(startfrom:2:,4)
+//    grf.y = grfSum(startfrom:2:,5)
+//
+endfunction
