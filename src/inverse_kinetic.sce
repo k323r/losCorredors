@@ -6,6 +6,8 @@ global PI
 PI = 3.1415
 global DELTA_T
 DELTA_T = 0.02
+global g
+g = 9.81
 
 // Set up proband varibales
 proband_mass = 85
@@ -30,15 +32,7 @@ for i = 1 : size(data_path, 2)
        
     // ANALYZE DATA
     
-    joints = [toes, ankle, knee, hip, shoulder, elbow, hand, neck]
-    
-    // Calculate angles on certain joints
-    ankle.angle = LawOfCosines(knee, ankle, toes)
-    knee.angle = LawOfCosines(hip, knee, ankle)
-    hip.angle = LawOfCosines(shoulder, hip, knee)
-    elbow.angle = LawOfCosines(shoulder, elbow, hand)
-    
-    // Calculate speeds, acceleration, abs speed, abs acc, smoothed speed (double moving mean)
+    // Calculate speeds, acceleration, abs speed, abs acc, smoothed speed (double moving mean)n angle and 
     foot = anal(foot)
     leg = anal(leg)
     thigh = anal(thigh)
@@ -54,17 +48,22 @@ for i = 1 : size(data_path, 2)
     
     Waage.x = 2.0
     Waage.y = 0.23
-    CoB = 0.23
     
     
     a = 0.03
     b = 0.0575
+    CoB = b
+    CoBx = 1.5
+    
+    // GET CALIBRATION AND FORCE MEASUREMENTS
+    
+    //caldir = uigetdir(cwd + "../data/")
+    //forcefile = uigetfile("*.txt*", cwd + "../data/", "Select force measurement",%t)
     
     forcefile = cwd + "../data/Waage/felix/schnell.txt"
     caldir = cwd + "../data/Waage/Kalibrierung/"
     
-    //caldir = uigetdir(cwd + "../data/")
-    //forcefile = uigetfile("*.txt*", cwd + "../data/", "Select force measurement",%t)
+    
     
     driftfile = caldir + '/Waagendrift_clean.txt';
     offsetDataRaw = readScaleFile(driftfile);
@@ -78,33 +77,82 @@ for i = 1 : size(data_path, 2)
     grfRaw = readScaleFile(forcefile)
     
     
-    offsetData = combineChannels(offsetDataRaw, a, b, CoB)
-    xCal = combineChannels(xCalRaw, a, b, CoB)
-    yCal = combineChannels(yCalRaw, a, b, CoB)
-    zCal = combineChannels(zCalRaw, a, b, CoB)
-    grfSum = combineChannels(grfRaw, a, b, CoB)
+    offsetData = combineChannels(offsetDataRaw, b, CoB)
+    xCal = combineChannels(xCalRaw, b, CoB)
+    yCal = combineChannels(yCalRaw, b, CoB)
+    zCal = combineChannels(zCalRaw, b, CoB)
+    grfSum = combineChannels(grfRaw, b, CoB)
     
-//    grf = calculateGRF(cwd, 770, CoB.x)
-//    grf.x = CoB.x
+    // Determine initial Contact from force Data
+    scf(1)
+    plot2d(grfSum(:,5))
+    forceStart = locate(1)
+    startBalance = int(forceStart(1))
+    
+    // Determine initial Contact from Kinematic Data
+    scf(2)
+    plot2d(ankle.y)
+    startContact = locate(1)
+    initialContact = int(startContact(1))
     
     
-    // Calculate Inverse Kinetics
-//    
-//    ankle.Fx = foot.mass * foot.acc.x - grf.Fx
-//    ankle.Fy = foot.mass * (foot.acc.y - g) - grf.Fy
-//    ankle.M = foot.MoI * foot.angacc - ankle.Fy * (ankle.x - foot.x) ...
-//              - ankle.Fx * (foot.y - ankle.y) - grf.Fx * ( foot.y - grf.y ) - grf.Fy * (grf.x - foot.x)
-//              
-//              
-//    knee.Fx = leg.mass * leg.acc.x + ankle.Fx
-//    knee.Fy = leg.mass * (leg.acc.y - g) + ankle.Fy
-//    knee.M = ankle.M + leg.MoI * leg.angacc - knee.Fy * (knee.x - leg.x)...
-//             - knee.Fx * (leg.y - knee.y) + ankle.Fx * (leg.y - ankle.y) + ankle.Fy * (ankle.x - leg.y)
-//             
-//    hip.Fx = thigh.mass * thigh.acc.x + knee.Fx
-//    hip.Fy = thigh.mass * (thigh.acc.y - g) + knee.Fy
-//    hip.M = knee.M + thigh.MoI * thigh.angacc - hip.Fy * (hip.x - thigh.x)...
-//             - hip.Fx * (thigh.y - hip.y) + knee.Fx * (thigh.y - knee.y) + knee.Fy * (knee.x - thigh.y)
+    // Create Ground reaction force object
+    grf.Fx = grfSum(startBalance:2:size(grfSum, 1),3)
+    grf.Fy = grfSum(startBalance:2:size(grfSum, 1),4)
+    grf.x = grfSum(startBalance:2:size(grfSum, 1), 5)
+    grf.y = 1.5
+    
+    
+    // INVERSE KINETICS
+    
+    liftOff = size(foot.x, 1)
+    contactLength = liftOff - initialContact
+    
+    // Slice data that is needed for inverse kinetics to frames with ground contact
+    
+    foot.acc.x = foot.acc.x(initialContact: liftOff)
+    foot.acc.y = foot.acc.y(initialContact: liftOff)
+    foot.angacc = foot.angacc(initialContact : liftOff)
+    foot.x = foot.x(initialContact : liftOff)
+    foot.y = foot.y(initialContact : liftOff)
+    ankle.x = ankle.x(initialContact : liftOff)
+    ankle.y = ankle.y(initialContact : liftOff)
+    
+    leg.acc.x = leg.acc.x(initialContact : liftOff)
+    leg.acc.y = leg.acc.y(initialContact : liftOff)
+    leg.angacc = leg.angacc(initialContact : liftOff)
+    leg.x = leg.x(initialContact : liftOff)
+    leg.y = leg.y(initialContact : liftOff)
+    knee.x = knee.x(initialContact : liftOff)
+    knee.y = knee.y(initialContact : liftOff)
+    
+    thigh.acc.x = thigh.acc.x(initialContact : liftOff)
+    thigh.acc.y = thigh.acc.y(initialContact : liftOff)
+    thigh.angacc = thigh.angacc(initialContact : liftOff)
+    thigh.x = thigh.x(initialContact : liftOff)
+    thigh.y = thigh.y(initialContact : liftOff)
+    hip.x = hip.x(initialContact : liftOff)
+    hip.y = hip.y(initialContact : liftOff)
+    
+    // Iterate over ground contact duration
+    for i = 1 : contactLength
+        // Calculate Joint forces and moments
+        ankle.Fx(i) = foot.mass * foot.acc.x(i) - grf.Fx(i)
+        ankle.Fy(i) = foot.mass * (foot.acc.y(i) - g) - grf.Fy(i)
+        ankle.M(i) = foot.MoI * foot.angacc(i) - ankle.Fy(i) * (ankle.x(i) - foot.x(i)) ...
+                  - ankle.Fx(i) * (foot.y(i) - ankle.y(i)) - grf.Fx(i) * ( foot.y(i) - grf.y ) - grf.Fy(i) * (grf.x(i) - foot.x(i))
+                  
+                  
+        knee.Fx(i) = leg.mass * leg.acc.x(i) + ankle.Fx(i)
+        knee.Fy(i) = leg.mass * (leg.acc.y(i) - g) + ankle.Fy(i)
+        knee.M(i) = ankle.M(i) + leg.MoI * leg.angacc(i) - knee.Fy(i) * (knee.x(i) - leg.x(i))...
+                 - knee.Fx(i) * (leg.y(i) - knee.y(i)) + ankle.Fx(i) * (leg.y(i) - ankle.y(i)) + ankle.Fy(i) * (ankle.x(i) - leg.y(i))
+                 
+        hip.Fx(i) = thigh.mass * thigh.acc.x(i) + knee.Fx(i)
+        hip.Fy(i) = thigh.mass * (thigh.acc.y(i) - g) + knee.Fy(i)
+        hip.M(i) = knee.M(i) + thigh.MoI * thigh.angacc(i) - hip.Fy(i) * (hip.x(i) - thigh.x(i))...
+                 - hip.Fx(i) * (thigh.y(i) - hip.y(i)) + knee.Fx(i) * (thigh.y(i) - knee.y(i)) + knee.Fy(i) * (knee.x(i) - thigh.y(i))
+     end
              
 //    scf(99)
 //    plot2d([knee.Fx, knee.Fy])

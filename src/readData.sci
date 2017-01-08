@@ -101,6 +101,16 @@ function  [foot, leg, thigh, leg_total, upperarm, forearm, arm_total, trunk] = c
     arm_total.angle = calcLimbangle(shoulder, hand)
     trunk.angle = calcLimbangle(shoulder, hip)
     
+    // Calculate angular velocites
+    foot.angacc = CentralDiff(foot.angle, 0.02)
+    leg.angacc = CentralDiff(leg.angle, 0.02)
+    thigh.angacc = CentralDiff(thigh.angle, 0.02)
+    leg_total.angacc = CentralDiff(leg_total.angle, 0.02)
+    upperarm.angacc = CentralDiff(upperarm.angle, 0.02)
+    forearm.angacc = CentralDiff(forearm.angle, 0.02)
+    arm_total.angacc = CentralDiff(arm_total.angle, 0.02)
+    trunk.angacc = CentralDiff(trunk.angle, 0.02)
+    
     // Add names
     
     foot.name = "foot"
@@ -177,14 +187,16 @@ function [forcesRaw] = readScaleFile (filepath)
     forcesRaw = data( index:length(data(:,1)),: ) // -> no wonder no one likes matlab/scilab! wtf is this shit
 endfunction
 
-function [forces] = combineChannels (data, a, b, CoB)
+function [forces] = combineChannels (data, b, CoB)
   
     for i = 1 : size(data, 1)
     
     forces(i,1) = data(i,1);
     forces(i,2) = data(i,2) + data(i,3);
+    // Channels parallel to walking direction
     forces(i,3) = data(i,4) + data(i,5);  
+    // Z channels // Parallel Gravitation
     forces(i,4) = data(i,6) + data(i,7) + data(i,8) + data(i,9);
-    forces(i,5) = (( data(i,6) + data(i,7) ) / ( data(i,6) + data(i,7) + data(i,8) + data(i,9) ))*2*b - b + CoB
+    forces(i,5) = ( ( data(i,6) + data(i,7)) / ( data(i,6) + data(i,7) + data(i,8) + data(i,9) ) )*2*b - b + CoB
     end
 endfunction
