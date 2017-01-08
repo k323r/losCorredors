@@ -23,6 +23,8 @@ CoB = b
 cwd = get_absolute_file_path('scale.sce')
 getd(cwd);
 
+
+
 driftfile = cwd + '../data/Waage/Kalibrierung/Waagendrift_clean.txt';
 offsetDataRaw = readScaleFile(driftfile);
 xCalFile = cwd + '../data/Waage/Kalibrierung/XKali_clean.txt';
