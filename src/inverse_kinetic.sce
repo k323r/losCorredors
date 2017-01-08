@@ -57,11 +57,11 @@ for i = 1 : size(data_path, 2)
     
     // GET CALIBRATION AND FORCE MEASUREMENTS
     
-    //caldir = uigetdir(cwd + "../data/")
-    //forcefile = uigetfile("*.txt*", cwd + "../data/", "Select force measurement",%t)
+    caldir = uigetdir(cwd + "../data/", "Select Calibration Directory")
+    forcefile = uigetfile("*.txt*", cwd + "../data/", "Select force measurement",%t)
     
-    forcefile = cwd + "../data/Waage/felix/schnell.txt"
-    caldir = cwd + "../data/Waage/Kalibrierung/"
+    //forcefile = cwd + "../data/Waage/felix/schnell.txt"
+    //caldir = cwd + "../data/Waage/Kalibrierung/"
     
     
     
