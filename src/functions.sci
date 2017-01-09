@@ -143,6 +143,8 @@ function [transAcc] = CalcAcceleration (joint)
     speed = CalcSpeed(joint);
     transAcc = CalcSpeed(speed);
 endfunction
+
+
 // Winkel der am mittleren Gelenk von drei übergebenen Gelenken anliegt
 // Übergabe: Drei 2 spaltige Matrizen mit Koordinaten
 // Rückgabe: Eine 1 spaltige Matrix mit skalaren Winkelwerten (Einheit Grad)
@@ -170,8 +172,6 @@ function [angle] = LawOfCosines(A, B, C)
 endfunction
 
 
-
-
 // Winkelgeschwindigkeit am mittleren Gelenk von drei übergebenen Gelenken
 // Übergabe: Drei 2 spaltige Matrizen mit Koordinaten
 // Rückgabe: Eine 1 spaltige Matrix mit skalaren Winkelgeschw.werten (Einheit Grad/s)
@@ -179,7 +179,6 @@ function [angSpeed]= CalcAngSpeed (proximalJoint, middleJoint, distalJoint)
     angle = CalcAngle(proximalJoint, middleJoint, distalJoint);
     angSpeed = CentralDiff(angle, DELTA_T);
 endfunction
-
 
 function [limb] = anal(limb)
     limb.speed = CalcSpeed(limb)
@@ -189,3 +188,117 @@ function [limb] = anal(limb)
     limb.smoothspeed = MovingMean(MovingMean(limb.absspeed))
 endfunction
 
+function calculateAllAngles()
+    ankle.angle = LawOfCosines(knee, ankle, toes)
+    knee.angle = LawOfCosines(hip, knee, ankle)
+    hip.angle = LawOfCosines(shoulder, hip, knee)
+    elbow.angle = LawOfCosines(shoulder, elbow, hand)   
+endfunction
+
+
+// WAAAAAAAAGENSTUFF
+// BECAUSE IT SUCKS DONKEY BALLS IN HELL
+// IRGENDWANN SCHREIBE ICH MAL NOCH NE DOKU WAS DIE FUNKTIONUEN TUEN 
+// ABER NICHT JETZT
+
+function [scaledrift] = calcScaleDrift(data)
+    [ scaleOffsetXSLOPE, scaleOffsetXOFFSET, scaleOffsetXSIGMA ]= reglin( data(:,1)', data(:,2)' );
+    [ scaleOffsetYSLOPE, scaleOffsetYOFFSET, scaleOffsetYSIGMA ]= reglin( data(:,1)', data(:,3)' );
+    [ scaleOffsetZSLOPE, scaleOffsetZOFFSET, scaleOffsetZSIGMA ]= reglin( data(:,1)', data(:,4)' );
+    scaledrift.x = scaleOffsetXSLOPE
+    scaledrift.y = scaleOffsetYSLOPE
+    scaledrift.z = scaleOffsetZSLOPE
+endfunction
+
+function [voltageToForce] = convertVoltageToForce(xCal, yCal, zCal)
+    
+    kg = [0, 1, 3.6, 7.75];  //kalibrationsgewichte
+    
+    meanVoltageX = [ mean(xCal(5000:6000, 2)), mean(xCal(10000:11000, 2)), mean(xCal(15000:16000, 2)), mean(xCal(20000:21000, 2)) ];
+    meanVoltageY = [ mean(yCal(5000:6000, 3)), mean(yCal(10000:11000, 3)), mean(yCal(15000:16000, 3)), mean(yCal(20000:21000, 3)) ];
+    meanVoltageZ = [ mean(zCal(5000:6000, 4)), mean(zCal(10000:11000, 4)), mean(zCal(20000:21000, 4)), mean(zCal(30000:31000, 4)) ];
+
+    [ scaleVoltageXSLOPE, scaleVoltageXOFFSET, scaleVoltageXSIGMA ] = reglin( meanVoltageX, kg );
+    [ scaleVoltageYSLOPE, scaleVoltageYOFFSET, scaleVoltageYSIGMA ] = reglin( meanVoltageY, kg );
+    [ scaleVoltageZSLOPE, scaleVoltageZOFFSET, scaleVoltageZSIGMA ] = reglin( meanVoltageZ, kg );
+
+    voltageToForce.x = scaleVoltageXSLOPE;
+    voltageToForce.y = scaleVoltageYSLOPE;
+    voltageToForce.z = scaleVoltageZSLOPE;
+    
+endfunction
+
+function [offset] = getOffset (data)
+    offset.x = mean(data(400:500,2))
+    offset.y = mean(data(400:500,3))
+    offset.z = mean(data(400:500,4))
+endfunction
+
+
+function [smoothData] = calculateForces (data, scaledrift, voltageToForce)
+    
+    offsetX = mean(data(100:200,2))
+    offsetY = mean(data(100:200,3)) 
+    offsetZ = mean(data(100:200,4))
+
+    smoothData.t = data(:,1)
+    smoothData.x = WeightedMovingMean4(((data(:,2) - (data(:,1) * scaledrift.x + offsetX  )) * voltageToForce.x), 0.0, 1, 1, 1, 0.0)
+    smoothData.y = WeightedMovingMean4(((data(:,3) - (data(:,1) * scaledrift.y + offsetY  )) * voltageToForce.y), 0.25, 0.5, 0.75, 0.5, 0.25)
+    smoothData.z = WeightedMovingMean4(((data(:,4) - (data(:,1) * scaledrift.z + offsetZ  )) * voltageToForce.z), 0.25, 0.5, 0.75, 0.5, 0.25)
+    smoothData.offsetX = offsetX
+    smoothData.offsetY = offsetY
+    smoothData.offsetZ = offsetZ
+endfunction
+
+function plotForces (data, num, title, resolution )
+    plotHandle = scf(num)
+    plot(data.t, data.x, 'r')
+    plot(data.t, data.y, 'g')
+    plot(data.t, data.z, 'b')
+    plotHandle.figure_size = resolution
+    plotHandle.figure_name = title
+    axes = gca()
+    xlabel(axes, "Zeit [s]")
+    ylabel(axes, "Gewicht [kg]")    
+    xs2svg(plotHandle, title+'.svg')
+endfunction
+
+
+function [grfSum] = calculateGRF(cwd, startfrom, CoB)
+
+    a = 0.03
+    b = 0.0575
+    
+    caldir = uigetdir(cwd + "../data/")
+    forcefile = uigetfile("*.txt*", cwd + "../data/", "Select force measurement",%t)
+    
+    driftfile = caldir + '/Waagendrift_clean.txt';
+    offsetDataRaw = readScaleFile(driftfile);
+    xCalFile = caldir + '/XKali_clean.txt';
+    xCalRaw = readScaleFile(xCalFile)
+    yCalFile = caldir + '/YKali_clean.txt';
+    yCalRaw = readScaleFile(yCalFile);
+    zCalFile = caldir + '/ZKali_clean.txt';
+    zCalRaw = readScaleFile(zCalFile);
+    
+    grfRaw = readScaleFile(forcefile)
+    
+    
+    offsetData = combineChannels(offsetDataRaw, a, b, CoB)
+    xCal = combineChannels(xCalRaw, a, b, CoB)
+    yCal = combineChannels(yCalRaw, a, b, CoB)
+    zCal = combineChannels(zCalRaw, a, b, CoB)
+    grfSum = combineChannels(grfRaw, a, b, CoB)
+    
+    
+//    scaledrift = calcScaleDrift(offsetData)
+//    voltageToForce = convertVoltageToForce(xCal, yCal, zCal)
+//    
+//    grf = calculateForces(grfSum, scaledrift, voltageToForce)
+    
+//     Extract Force Data, start from user chosen point, increment of 2 to match force balance sampling (100 hz) with camera fps (50 hz)
+//    grf.Fx = grfSum(startfrom:2:,3)
+//    grf.Fy = grfSum(startfrom:2:,4)
+//    grf.y = grfSum(startfrom:2:,5)
+//
+endfunction
