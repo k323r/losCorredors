@@ -81,11 +81,16 @@ for i = 1 : size(data_path, 2)
     xCal = combineChannels(xCalRaw, b, CoB)
     yCal = combineChannels(yCalRaw, b, CoB)
     zCal = combineChannels(zCalRaw, b, CoB)
-    grfSum = combineChannels(grfRaw, b, CoB)
+    grfRaw = combineChannels(grfRaw, b, CoB)
+    
+    scaledrift = calcScaleDrift(offsetData)
+    voltageToForce = convertVoltageToForce(xCal, yCal, zCal)
+    
+    grfBalance = calculateForces(grfRaw, scaledrift, voltageToForce)
     
     // Determine initial Contact from force Data
     scf(1)
-    plot2d(grfSum(:,5))
+    plot2d(grfBalance.CoF_y)
     forceStart = locate(1)
     startBalance = int(forceStart(1))
     
@@ -97,9 +102,9 @@ for i = 1 : size(data_path, 2)
     
     
     // Create Ground reaction force object
-    grf.Fx = grfSum(startBalance:2:size(grfSum, 1),3)
-    grf.Fy = grfSum(startBalance:2:size(grfSum, 1),4)
-    grf.x = grfSum(startBalance:2:size(grfSum, 1), 5)
+    grf.Fx = grfBalance.Fy(startBalance:2:$)
+    grf.Fy = grfBalance.Fz(startBalance:2:$)
+    grf.x = grfBalance.CoF_y(startBalance:2:$)
     grf.y = 1.5
     
     

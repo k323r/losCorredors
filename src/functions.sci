@@ -242,12 +242,13 @@ function [smoothData] = calculateForces (data, scaledrift, voltageToForce)
     offsetZ = mean(data(100:200,4))
 
     smoothData.t = data(:,1)
-    smoothData.x = WeightedMovingMean4(((data(:,2) - (data(:,1) * scaledrift.x + offsetX  )) * voltageToForce.x), 0.0, 1, 1, 1, 0.0)
-    smoothData.y = WeightedMovingMean4(((data(:,3) - (data(:,1) * scaledrift.y + offsetY  )) * voltageToForce.y), 0.25, 0.5, 0.75, 0.5, 0.25)
-    smoothData.z = WeightedMovingMean4(((data(:,4) - (data(:,1) * scaledrift.z + offsetZ  )) * voltageToForce.z), 0.25, 0.5, 0.75, 0.5, 0.25)
+    smoothData.Fx = WeightedMovingMean4(((data(:,2) - (data(:,1) * scaledrift.x + offsetX  )) * voltageToForce.x), 0.0, 1, 1, 1, 0.0)
+    smoothData.Fy = WeightedMovingMean4(((data(:,3) - (data(:,1) * scaledrift.y + offsetY  )) * voltageToForce.y), 0.25, 0.5, 0.75, 0.5, 0.25)
+    smoothData.Fz = WeightedMovingMean4(((data(:,4) - (data(:,1) * scaledrift.z + offsetZ  )) * voltageToForce.z), 0.25, 0.5, 0.75, 0.5, 0.25)
     smoothData.offsetX = offsetX
     smoothData.offsetY = offsetY
     smoothData.offsetZ = offsetZ
+    smoothData.CoF_y = data(:,5)
 endfunction
 
 function plotForces (data, num, title, resolution )
