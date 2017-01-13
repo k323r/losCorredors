@@ -1,0 +1,2 @@
+Idealpendel_T Beinpendel_T Beinpendel_f rel_diff
+ 1.28  0.90  1.11 41.94 

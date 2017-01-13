@@ -4,7 +4,6 @@
 
 // Öffnendialog starten
 
-
 function [toes, ankle, knee, hip, shoulder, elbow, hand, neck] = readFromMDF(path)
 
 // Einlesen der Daten
@@ -59,6 +58,26 @@ end
 
 endfunction
 
+function [relangle] = calcLimbangle(jointA, jointB)
+    
+    for i = 1 : size(jointA.x, 1)
+    
+        dx = jointA.x(i) - jointB.x(i)
+        dy = jointA.y(i) - jointB.y(i)
+        PI = 3.1415
+        hyp = sqrt(dx.^2 + dy.^2)
+        angle = asin(dy/hyp)
+        if dx < 0 & dy > 0  then
+            relangle(i) = PI - angle
+        elseif dx < 0 & dy < 0 then
+            relangle(i) = PI + angle
+        elseif dx > 0 & dy < 0 then
+            relangle(i) = 2 * PI - angle
+        else relangle(i) = angle
+        end
+    end
+endfunction
+
 function  [foot, leg, thigh, leg_total, upperarm, forearm, arm_total, trunk] = createLimbs(toes, ankle, knee, hip, shoulder, elbow, hand, neck)
     // Create Limbs
 
@@ -70,6 +89,27 @@ function  [foot, leg, thigh, leg_total, upperarm, forearm, arm_total, trunk] = c
     forearm = CalcCoM(elbow, hand, 0.430)
     arm_total = CalcCoM(shoulder, hand, 0.5) // Nicht ganz richtig, da anthro Daten zwischen Ellenbogen und Finger anliegen
     trunk = CalcCoM(shoulder, hip, 0.5)
+    
+    
+    // Calculate angles
+    foot.angle = calcLimbangle(ankle, toes)
+    leg.angle = calcLimbangle(knee, ankle)
+    thigh.angle = calcLimbangle(hip, knee)
+    leg_total.angle = calcLimbangle(hip, ankle)
+    upperarm.angle = calcLimbangle(shoulder, elbow)
+    forearm.angle = calcLimbangle(elbow, hand)
+    arm_total.angle = calcLimbangle(shoulder, hand)
+    trunk.angle = calcLimbangle(shoulder, hip)
+    
+    // Calculate angular velocites
+    foot.angacc = CentralDiff(foot.angle, 0.02)
+    leg.angacc = CentralDiff(leg.angle, 0.02)
+    thigh.angacc = CentralDiff(thigh.angle, 0.02)
+    leg_total.angacc = CentralDiff(leg_total.angle, 0.02)
+    upperarm.angacc = CentralDiff(upperarm.angle, 0.02)
+    forearm.angacc = CentralDiff(forearm.angle, 0.02)
+    arm_total.angacc = CentralDiff(arm_total.angle, 0.02)
+    trunk.angacc = CentralDiff(trunk.angle, 0.02)
     
     // Add names
     
@@ -103,6 +143,7 @@ function  [foot, leg, thigh, leg_total, upperarm, forearm, arm_total, trunk] = c
     forearm.mass = 0.016 * proband_mass
     arm_total.mass = 0.050 * proband_mass
     trunk.mass = 0.497 * proband_mass
+ 
     
     // Add limb lengths
     
@@ -135,4 +176,27 @@ function  [foot, leg, thigh, leg_total, upperarm, forearm, arm_total, trunk] = c
     forearm.MoI = forearm.mass * forearm.RoG^2
     arm_total.MoI = arm_total.mass * arm_total.RoG^2
 
+endfunction
+
+function [forcesRaw] = readScaleFile (filepath)
+    data = fscanfMat(filepath);
+    index = 1
+    while data(index,1) < 3.20
+        index = index + 1
+    end
+    forcesRaw = data( index:length(data(:,1)),: ) // -> no wonder no one likes matlab/scilab! wtf is this shit
+endfunction
+
+function [forces] = combineChannels (data, b, CoB)
+  
+    for i = 1 : size(data, 1)
+    
+    forces(i,1) = data(i,1);
+    forces(i,2) = data(i,2) + data(i,3);
+    // Channels parallel to walking direction
+    forces(i,3) = data(i,4) + data(i,5);  
+    // Z channels // Parallel Gravitation
+    forces(i,4) = data(i,6) + data(i,7) + data(i,8) + data(i,9);
+    forces(i,5) = ( ( data(i,6) + data(i,7)) / ( data(i,6) + data(i,7) + data(i,8) + data(i,9) ) )*2*b - b + CoB
+    end
 endfunction
