@@ -17,13 +17,13 @@ Der Aufbau besteht aus einem mercury 4.0 Laufband (h/p/cosmos sports \& medical 
 	\label{fig:laufbnd_stp}
 \end{figure}
 
-\subsubsection{Laufsteg}
-Dieselbe Videokamera und Baustrahler wie bei dem Laufband-Versuchen werden verwendet. Der Proband läuft in diesem Experiment über einen Laufsteg (Eigenbau Hochschule Bremen, Deutschland). In den Steg ist ein Quarzkristall-3-Komponenten-Dynanometer Typ 9257B (Kistler Gruppe Winterthur, Schweiz) zum Messen der Kräfte eingebaut, welches im Folgenden als Waage bezeichnet wird. Die Waage ist über einen Mehrkanal-Ladungsverstärker Typ 5070A (Kistler) mit einem Computer verbunden. Abbildung~\ref{fig:laufstg_stp} (nicht maßstäblich) zeigt den Aufbau mit der Kamera XX~m vom Laufsteg entfernt. Die Kamera steht zentriert vor der Waage und die Bildebene ist parallel zur langen Kante des Laufsteges ausgerichtet.
+\subsubsection{Laufstrecke}
+Dieselbe Videokamera und Baustrahler wie bei dem Laufband-Versuchen werden verwendet. Der Proband läuft in diesem Experiment über einen Laufstrecke (Eigenbau Hochschule Bremen, Deutschland). In den Steg ist ein Quarzkristall-3-Komponenten-Dynanometer Typ 9257B (Kistler Gruppe Winterthur, Schweiz) zum Messen der Kräfte eingebaut, welches im Folgenden als Waage bezeichnet wird. Die Waage ist über einen Mehrkanal-Ladungsverstärker Typ 5070A (Kistler) mit einem Computer verbunden. Abbildung~\ref{fig:laufstg_stp} (nicht maßstäblich) zeigt den Aufbau mit der Kamera XX~m vom Laufstrecke entfernt. Die Kamera steht zentriert vor der Waage und die Bildebene ist parallel zur langen Kante des Laufstreckees ausgerichtet.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{bilder/mat_met/Laufsteg_setup}
-	\caption[Aufbau Laufsteg Versuch]{Aufbau des Laufsteg-Versuches mit Laufsteg LS, Kamera K, Scheinwerfern SW, Computer C, Waage W und Ladungsverstärker LV. Länge Steg $L_S~=~6~m$ und Abstand zur Kamera $A_{Kam}~=~5~m$}
+	\includegraphics[width=0.7\linewidth]{bilder/mat_met/Laufstrecke_setup}
+	\caption[Aufbau Laufstrecke Versuch]{Aufbau des Laufstrecke-Versuches mit Laufstrecke LS, Kamera K, Scheinwerfern SW, Computer C, Waage W und Ladungsverstärker LV. Länge Steg $L_S~=~6~m$ und Abstand zur Kamera $A_{Kam}~=~5~m$}
 	\label{fig:laufstg_stp}
 \end{figure}
 
@@ -32,14 +32,14 @@ Dieselbe Videokamera und Baustrahler wie bei dem Laufband-Versuchen werden verwe
 Ausgehend von 1~km/h werden in 1~km/h-Schritten sieben Geschwindigkeiten untesucht. Das Gehen wird subjektiv von 1 (angenehm) bis 10 (unangenehm) bewertet.Je zwei Gangzyklen werden mit einer Bildrate von 50~Hz, einer Belichtung von 1/1000~s und auf 5~m fixierten Fokus aufgenommen.\\
 Die Videos werden anschließend mit dem Programm ffmpeg 2.1 (LGP License, ffmpeg.org) in Einzelbilder zerlegt. In ImageJ (National Institutes of Health Bethesda, Maryland) werden mithilfe des Plugins MTrackJ \textbf{CITE(Meijering 20120)} die x- und y-Koordinaten aller Gelenke digitalisiert und im .mdf-Format gespeichert.
 
-\subsubsection{Laufsteg}
+\subsubsection{Laufstrecke}
 EINSTELLUNGEN LADUNGSVERSTÄRKER???\\
 Die Kameraeinstellungen vom Laufbandversuch übernommen finden auch hier Anwendung. Die Digitalisierung der Koordinaten ist wie oben beschrieben durchgeführt worden. Die Waagensignale werden mit 100 Hz und 200~N/V vom Ladungsverstärker an den Computer weitergeleitet. Mit DASYLab werden die Eingangssignale verarbeitet und alle 8 Kanäle im ASCII-Format gespeichert.
 Für eine 4-Punkt-Kalibration wird die Waage in alle drei Raumrichtungen mit 0, 1, 3,6 und 7,75~kg belastet. Der Waagendrift wird über 60~s ohne Belastung für jede Raumrichtung ermittelt.\\
 Blick geradeaus, um nicht auf den Gang nicht an die Waage anzupassen
 
 
-\subsubsection{Datenauswertung mit Scilab}
+\subsection{Datenauswertung mit Scilab}
 Aufbau siehe Kirltey et al
 Die Rohdaten der X- und Y-Koordinaten und der Waagenmessungen werden für beide Versuche in Scilab ausgewertet. Die verwendetete Vorgehensweise wird daher hier für beide Versuche gebündelt erklärt, um den Arbeitsvorgang deutlich darzustellen.\\\\
 X/Y-Koordinaten\\

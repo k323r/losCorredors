@@ -15,7 +15,7 @@ cwd = get_absolute_file_path('main.sce')
 getd(cwd);
 
 // GET DATA PATH
-data_path = uigetfile(["*.mdf", "Output from ImageJ"], cwd + "/../data/Laufen/felix/","Select CSV data",%t);
+data_path = uigetfile(["*.mdf", "Output from ImageJ"], cwd + "/../data/Laufen/","Select CSV data",%t);
 
 // Select subfolder in results/ to save all result text files
 
