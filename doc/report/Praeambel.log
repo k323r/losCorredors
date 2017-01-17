@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.8)  16 JAN 2017 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.8)  16 JAN 2017 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1678,42 +1678,56 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
+<bilder/Einleitung/Proband_Pendel.png, id=143, 1212.53pt x 1762.585pt>
+File: bilder/Einleitung/Proband_Pendel.png Graphic file (type png)
 
+<use bilder/Einleitung/Proband_Pendel.png>
+Package pdftex.def Info: bilder/Einleitung/Proband_Pendel.png used on input lin
+e 8.
+(pdftex.def)             Requested size: 170.71652pt x 248.15875pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 9.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 9.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 9.
+
+Underfull \hbox (badness 1668) in paragraph at lines 9--9
+[][]\T1/lmr/bx/n/10 Abbildung 1: |\T1/lmr/m/n/10 Un-ter-suchungsebene,
  []
 
 
-Overfull \hbox (18.1027pt too wide) in paragraph at lines 5--10
-\T1/lmr/m/n/10.95 ein-er Brem-skraft beim ini-tialen Bo-denkon-takt erk-lärt (K
-UO 2007). (DEN AB-SATZ WAHRSCHEIN-
+Underfull \hbox (badness 1348) in paragraph at lines 11--15
+[]\T1/lmr/m/n/10.95 Weitere Aus-sagen über den Gang lassen sich durch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--10
-
+Underfull \hbox (badness 1371) in paragraph at lines 11--15
+\T1/lmr/m/n/10.95 das Messen der Bo-den-reak-tion-skräfte (BRK) tr-e-f-fen.
  []
 
-<bilder/Einleitung/Skizze_Gangphasen_small.png, id=143, 722.7pt x 169.3527pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 15.
+[5
+
+
+
+ <./bilder/Einleitung/Proband_Pendel.png>]
+<bilder/Einleitung/Skizze_Gangphasen_small.png, id=154, 722.7pt x 169.3527pt>
 File: bilder/Einleitung/Skizze_Gangphasen_small.png Graphic file (type png)
 
 <use bilder/Einleitung/Skizze_Gangphasen_small.png>
 Package pdftex.def Info: bilder/Einleitung/Skizze_Gangphasen_small.png used on 
-input line 13.
+input line 18.
 (pdftex.def)             Requested size: 455.24411pt x 106.67984pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
- [5
 
-
-
-]
-<bilder/Einleitung/gangphasen.png, id=150, 1393.205pt x 1082.0425pt>
+<bilder/Einleitung/gangphasen.png, id=155, 1393.205pt x 1082.0425pt>
 File: bilder/Einleitung/gangphasen.png Graphic file (type png)
 
 <use bilder/Einleitung/gangphasen.png>
-Package pdftex.def Info: bilder/Einleitung/gangphasen.png used on input line 20
+Package pdftex.def Info: bilder/Einleitung/gangphasen.png used on input line 29
 .
 (pdftex.def)             Requested size: 318.66948pt x 247.49416pt.
 )
@@ -1740,120 +1754,132 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 7.
 
-<bilder/mat_met/Laufband_setup.png, id=158, 2096.83376pt x 2050.66125pt>
+<bilder/mat_met/Laufband_setup.png, id=163, 1682.285pt x 1378.14874pt>
 File: bilder/mat_met/Laufband_setup.png Graphic file (type png)
 
 <use bilder/mat_met/Laufband_setup.png>
 Package pdftex.def Info: bilder/mat_met/Laufband_setup.png used on input line 1
-5.
-(pdftex.def)             Requested size: 227.62206pt x 222.60083pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 16.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 16.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 16.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
+1.
+(pdftex.def)             Requested size: 227.62204pt x 186.46263pt.
 
-<bilder/mat_met/Laufstrecke_setup.png, id=160, 4426.5375pt x 2134.97626pt>
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 17
+.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 17.
+<bilder/mat_met/Laufstrecke_setup.png, id=165, 4426.5375pt x 2175.12625pt>
 File: bilder/mat_met/Laufstrecke_setup.png Graphic file (type png)
 
 <use bilder/mat_met/Laufstrecke_setup.png>
 Package pdftex.def Info: bilder/mat_met/Laufstrecke_setup.png used on input lin
-e 24.
-(pdftex.def)             Requested size: 318.66948pt x 153.69862pt.
+e 21.
+(pdftex.def)             Requested size: 318.66948pt x 156.58905pt.
+
+Underfull \hbox (badness 4205) in paragraph at lines 18--25
+\T1/lmr/m/n/10.95 Versuches kom-men auch hi-er zum Ein-
+ []
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 18--25
+\T1/lmr/m/n/10.95 satz. Der Proband läuft in diesem Ex-
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 18--25
+\T1/lmr/m/n/10.95 per-i-ment über eine Lauf-strecke (Eigen-bau
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 18--25
+\T1/lmr/m/n/10.95 Hochschule Bre-men, Deutsch-land). In die
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 18--25
+\T1/lmr/m/n/10.95 Dynanometer Typ 9257B (Kistler Gruppe
+ []
+
+
+Overfull \hbox (22.85228pt too wide) in paragraph at lines 18--25
+\T1/lmr/m/n/10.95 Mehrkanal-Ladungsverstärker Typ 5070A (Kistler)
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
- [7
+(babel)             in language  on input line 26.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 30.
+[7
 
 
  <./bilder/mat_met/Laufband_setup.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 38.
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--45
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--45
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--48
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 48.
 [8 <./bilder/mat_met/Laufstrecke_setup.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
-
- []
-
-
-Overfull \hbox (15.804pt too wide) in paragraph at lines 69--75
+Overfull \hbox (15.804pt too wide) in paragraph at lines 66--72
 []\T1/lmr/m/n/10.95 Alle Tra-jek-to-rien, Geschwindigkeit-en und Beschle-u-ni-g
 un-gen wur-den mit-tels glei-t-en-dem, gewichteten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
-
- []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 77--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--87
+Underfull \hbox (badness 10000) in paragraph at lines 66--72
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 92--86
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
@@ -1861,12 +1887,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 86.
-[10]
+[9]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 86.
- [11]
+ [10]
 \openout2 = `inhalt/Ergebnisse.aux'.
 
  (./inhalt/Ergebnisse.tex
@@ -1910,7 +1936,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 87.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 87.
-[12
+[11
 
 
 ]
@@ -1931,7 +1957,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 88.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 88.
- [13
+ [12
 
 
 ]
@@ -1942,7 +1968,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 89.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 89.
- [14
+ [13
 
 
 ]
@@ -1959,7 +1985,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 105.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 105.
-[15
+[14
 
 ]
 \openout2 = `inhalt/Anhang.aux'.
@@ -1989,30 +2015,30 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 23310 strings out of 494946
- 424910 string characters out of 6180982
- 588191 words of memory out of 5000000
- 26012 multiletter control sequences out of 15000+600000
- 77243 words of font info for 52 fonts, out of 8000000 for 9000
+ 23317 strings out of 494946
+ 425134 string characters out of 6180982
+ 588260 words of memory out of 5000000
+ 26018 multiletter control sequences out of 15000+600000
+ 72980 words of font info for 51 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 73i,14n,66p,8854b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,14n,66p,8854b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texli
 ve/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/f
-onts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/l
-m-mathit.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
+onts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
+lm/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/lm/lmri10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Praeambel.pdf (18 pages, 1242853 bytes).
+onts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.p
+fb>
+Output written on Praeambel.pdf (17 pages, 1380749 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
- 34 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 

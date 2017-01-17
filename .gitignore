@@ -1,4 +1,4 @@
 src/guiTest.sce
-*.png
+!doc/report/bilder/*.png
 doc/report/bilder/Einleitung/*.xcf
 doc/report/bilder/Einleitung/Gmail/

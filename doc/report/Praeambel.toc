@@ -11,14 +11,14 @@
 \contentsline {subsection}{\numberline {4.2}Material}{7}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}Laufband}{7}{subsubsection.4.2.1}
 \contentsline {subsubsection}{\numberline {4.2.2}Laufstrecke}{7}{subsubsection.4.2.2}
-\contentsline {subsection}{\numberline {4.3}Methoden}{8}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Laufband}{8}{subsubsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3}Methoden}{7}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Laufband}{7}{subsubsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.2}Laufstrecke}{8}{subsubsection.4.3.2}
-\contentsline {subsection}{\numberline {4.4}Datenauswertung mit Scilab}{9}{subsection.4.4}
-\contentsline {section}{\numberline {5}Ergebnisse}{12}{section.5}
-\contentsline {subsection}{\numberline {5.1}Laufband}{12}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Laufband (Fadenpendel)}{12}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Laufstrecke}{12}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Vergleich Laufband und Laufstrecke}{12}{subsection.5.4}
-\contentsline {section}{\numberline {6}Diskussion}{13}{section.6}
-\contentsline {section}{\numberline {7}Literatur}{15}{section.7}
+\contentsline {subsection}{\numberline {4.4}Datenauswertung mit Scilab}{8}{subsection.4.4}
+\contentsline {section}{\numberline {5}Ergebnisse}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Laufband}{11}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Laufband (Fadenpendel)}{11}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Laufstrecke}{11}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Vergleich Laufband und Laufstrecke}{11}{subsection.5.4}
+\contentsline {section}{\numberline {6}Diskussion}{12}{section.6}
+\contentsline {section}{\numberline {7}Literatur}{14}{section.7}
