@@ -1,0 +1,161 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{alexander1992simple}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4f2f415812747b621f0a3c3e730d010d}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={R.\bibnamedelimi McNeill},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{4f2f415812747b621f0a3c3e730d010d}
+      \strng{fullhash}{4f2f415812747b621f0a3c3e730d010d}
+      \strng{authornamehash}{4f2f415812747b621f0a3c3e730d010d}
+      \strng{authorfullhash}{4f2f415812747b621f0a3c3e730d010d}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Human Movement Science}
+      \field{number}{1}
+      \field{title}{Simple models of Walking and Jumping}
+      \field{volume}{11}
+      \field{year}{1992}
+      \field{pages}{3\bibrangedash 9}
+      \range{pages}{7}
+    \endentry
+    \entry{meijering2012methods}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=bfe8d6cdd9efe2d22e41d4849b39f6a0}{%
+           family={Meijering},
+           familyi={M\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=1a4083755bedb4200078c37548e59d11}{%
+           family={Dzyubachyk},
+           familyi={D\bibinitperiod},
+           given={Oleh},
+           giveni={O\bibinitperiod}}}%
+        {{uniquename=0,hash=8aef57d90a45fb0e7a8519079dc7bdb9}{%
+           family={Smal},
+           familyi={S\bibinitperiod},
+           given={Ihor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{d732114c3e1836ba1f34ee9594aa723f}
+      \strng{fullhash}{fc9d5b310cd5d941eb0813c2ac51f6e3}
+      \strng{authornamehash}{d732114c3e1836ba1f34ee9594aa723f}
+      \strng{authorfullhash}{fc9d5b310cd5d941eb0813c2ac51f6e3}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Methods Enzymol}
+      \field{number}{9}
+      \field{title}{Methods for cell and particle tracking}
+      \field{volume}{504}
+      \field{year}{2012}
+      \field{pages}{183\bibrangedash 200}
+      \range{pages}{18}
+    \endentry
+    \entry{perry1992gait}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=7dc5c327b662da16f052d05fa4fdc77b}{%
+           family={Perry},
+           familyi={P\bibinitperiod},
+           given={Jacquelin},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=9a628b405a458330e21b77024deef053}{%
+           family={Burnfield},
+           familyi={B\bibinitperiod},
+           given={Judith\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Slack Thorofare, NJ}%
+      }
+      \strng{namehash}{466920f09a9423b63d516a334b84aae6}
+      \strng{fullhash}{466920f09a9423b63d516a334b84aae6}
+      \strng{authornamehash}{466920f09a9423b63d516a334b84aae6}
+      \strng{authorfullhash}{466920f09a9423b63d516a334b84aae6}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gait analysis: normal and pathological function}
+      \field{year}{1992}
+    \endentry
+    \entry{wren2011efficacy}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=67a00eee62bb90a52d01cf7f6e3c2b34}{%
+           family={Wren},
+           familyi={W\bibinitperiod},
+           given={Tishya\bibnamedelima AL},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=371b001912ade69e4fce8c7e8628e425}{%
+           family={Gorton},
+           familyi={G\bibinitperiod},
+           given={George\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=2b96537ef071e9e28da773728d25ebc6}{%
+           family={Ounpuu},
+           familyi={O\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=6e16c4d0827c32cf351bb9a756dfdb17}{%
+           family={Tucker},
+           familyi={T\bibinitperiod},
+           given={Carole\bibnamedelima A},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5fcde58f918996c43d609114368382cc}
+      \strng{fullhash}{d41f674ca7e590bb07506cf91dc15a38}
+      \strng{authornamehash}{5fcde58f918996c43d609114368382cc}
+      \strng{authorfullhash}{d41f674ca7e590bb07506cf91dc15a38}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Gait \& posture}
+      \field{number}{2}
+      \field{title}{Efficacy of clinical gait analysis: a systematic review}
+      \field{volume}{34}
+      \field{year}{2011}
+      \field{pages}{149\bibrangedash 153}
+      \range{pages}{5}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

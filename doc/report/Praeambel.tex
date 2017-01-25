@@ -31,10 +31,11 @@
 
 %Gemischt
 \usepackage[pdfborderstyle={/S/U/W 0.5}]{hyperref}
-\usepackage{capt-of,todonotes, import, setspace,comment, url, eurosym, pdflscape,natbib,scrpage2, }
+\usepackage{capt-of,todonotes, import, setspace,comment, url, eurosym, pdflscape,scrpage2, }
 
 
-%\usepackage[style=authoryear]{biblatex}
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{bibliography.bib}
 
 \hypersetup{pageanchor=false}
 \hyphenation{quell-offenen klein-skaligen}
@@ -89,14 +90,13 @@
 \include{inhalt/FazitAusblick}
 
 
-%\begin{spacing}{0.05}
-%\thispagestyle{plain}
-%\section{Quellenverzeichnis}
-%\pagestyle{scrheadings}
-%\ohead{Quellenverzeichnis}
-%\bibliographystyle{chicago}
-%\bibliography{bibliographie}
-%\end{spacing}
+\begin{spacing}{0.05}
+\thispagestyle{plain}
+\section{Literaturverzeichnis}
+\pagestyle{scrheadings}
+\ohead{Literaturverzeichnis}
+\printbibliography
+\end{spacing}
 
 \section{Literatur}
 Das Literaturverzeichnis ist nach folgendem Schema zu gestalten: (siehe Skritp)\\
