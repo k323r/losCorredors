@@ -39,16 +39,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3}Vergleich Laufband und Laufstrecke}{14}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Sonstige Quellen}{17}{section.5}
+\contentsline {section}{\numberline {5}Fazit}{16}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in X-Richtung}{ii}{section*.25}
+\contentsline {section}{\numberline {6}Ausblick}{16}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in Y-Richtung}{ii}{section*.26}
+\contentsline {section}{\numberline {7}Sonstige Quellen}{18}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Momente um Z-Achse}{ii}{section*.27}
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in X-Richtung}{ii}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in X-Richtung}{ii}{section*.29}
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in Y-Richtung}{ii}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in Y-Richtung}{ii}{section*.30}
+\contentsline {paragraph}{\nonumberline Momente um Z-Achse}{ii}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Momente um Z-Achse}{iii}{section*.31}
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in X-Richtung}{ii}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in Y-Richtung}{ii}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Momente um Z-Achse}{iii}{section*.29}

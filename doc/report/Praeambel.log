@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.8)  5 FEB 2017 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.8)  5 FEB 2017 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1792,7 +1792,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<bilder/Einleitung/Skizze_Gangphasen_small.png, id=100, 722.7pt x 169.3527pt>
+<bilder/Einleitung/Skizze_Gangphasen_small.png, id=110, 722.7pt x 169.3527pt>
 File: bilder/Einleitung/Skizze_Gangphasen_small.png Graphic file (type png)
 
 <use bilder/Einleitung/Skizze_Gangphasen_small.png>
@@ -1830,7 +1830,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 
-<bilder/Einleitung/Proband_Pendel.png, id=123, 908.64468pt x 1321.93875pt>
+<bilder/Einleitung/Proband_Pendel.png, id=133, 908.64468pt x 1321.93875pt>
 File: bilder/Einleitung/Proband_Pendel.png Graphic file (type png)
 
 <use bilder/Einleitung/Proband_Pendel.png>
@@ -1877,7 +1877,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 12.
-<bilder/mat_met/Setup_combo.png, id=127, 5728.40125pt x 1877.0125pt>
+<bilder/mat_met/Setup_combo.png, id=137, 5728.40125pt x 1877.0125pt>
 File: bilder/mat_met/Setup_combo.png Graphic file (type png)
 
 <use bilder/mat_met/Setup_combo.png>
@@ -1946,7 +1946,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-<bilder/Ergebnisse/BRK.png, id=165, 560.8453pt x 441.14813pt>
+<bilder/Ergebnisse/BRK.png, id=176, 560.8453pt x 441.14813pt>
 File: bilder/Ergebnisse/BRK.png Graphic file (type png)
 
 <use bilder/Ergebnisse/BRK.png>
@@ -1956,7 +1956,7 @@ Package pdftex.def Info: bilder/Ergebnisse/BRK.png used on input line 31.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/Ergebnisse/ang_inv_kin.png, id=166, 1568.86125pt x 475.02469pt>
+<bilder/Ergebnisse/ang_inv_kin.png, id=177, 1568.86125pt x 475.02469pt>
 File: bilder/Ergebnisse/ang_inv_kin.png Graphic file (type png)
 
 <use bilder/Ergebnisse/ang_inv_kin.png>
@@ -1971,7 +1971,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
-<bilder/Ergebnisse/comp_knee_mom.png, id=176, 1593.70406pt x 468.24937pt>
+<bilder/Ergebnisse/comp_knee_mom.png, id=186, 1593.70406pt x 468.24937pt>
 File: bilder/Ergebnisse/comp_knee_mom.png Graphic file (type png)
 
 <use bilder/Ergebnisse/comp_knee_mom.png>
@@ -2002,19 +2002,21 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 59.
 [9 <./bilder/Ergebnisse/BRK.png> <./bilder/Ergebnisse/ang_inv_kin.png>]
-<bilder/Ergebnisse/compare_hand.png, id=186, 1593.70406pt x 412.54124pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 59.
+
+[10 <./bilder/Ergebnisse/comp_knee_mom.png>]
+<bilder/Ergebnisse/compare_hand.png, id=202, 1593.70406pt x 412.54124pt>
 File: bilder/Ergebnisse/compare_hand.png Graphic file (type png)
 
 <use bilder/Ergebnisse/compare_hand.png>
 Package pdftex.def Info: bilder/Ergebnisse/compare_hand.png used on input line 
 62.
 (pdftex.def)             Requested size: 455.24411pt x 117.83986pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 65.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 65.
- [10 <./bilder/Ergebnisse/comp_knee_mom.png>]
-<bilder/Ergebnisse/compare_trunk.png, id=193, 1593.70406pt x 412.54124pt>
+
+<bilder/Ergebnisse/compare_trunk.png, id=203, 1593.70406pt x 412.54124pt>
 File: bilder/Ergebnisse/compare_trunk.png Graphic file (type png)
 
 <use bilder/Ergebnisse/compare_trunk.png>
@@ -2022,7 +2024,7 @@ Package pdftex.def Info: bilder/Ergebnisse/compare_trunk.png used on input line
  68.
 (pdftex.def)             Requested size: 455.24411pt x 117.83986pt.
 
-<bilder/Ergebnisse/compare_knee_angle_3_speeds.png, id=194, 1593.70406pt x 412.
+<bilder/Ergebnisse/compare_knee_angle_3_speeds.png, id=204, 1593.70406pt x 412.
 54124pt>
 File: bilder/Ergebnisse/compare_knee_angle_3_speeds.png Graphic file (type png)
 
@@ -2095,10 +2097,14 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout2 = `inhalt/FazitAusblick.aux'.
 
  (./inhalt/FazitAusblick.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--3
-
- []
-
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 7.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 98.
@@ -2109,6 +2115,11 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 98.
+ [17]
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 106.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 106.
@@ -2116,13 +2127,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 111.
- [17
+ [18
 
 ]
 \openout2 = `inhalt/Anhang.aux'.
 
- (./inhalt/Anhang.tex
-<bilder/anhang/anthrop_Tabelle.png, id=261, 369.66106pt x 543.10905pt>
+
+(./inhalt/Anhang.tex
+<bilder/anhang/anthrop_Tabelle.png, id=272, 369.66106pt x 543.10905pt>
 File: bilder/anhang/anthrop_Tabelle.png Graphic file (type png)
 
 <use bilder/anhang/anthrop_Tabelle.png>
@@ -2130,7 +2142,7 @@ Package pdftex.def Info: bilder/anhang/anthrop_Tabelle.png used on input line 1
 2.
 (pdftex.def)             Requested size: 409.71692pt x 601.96318pt.
 
-<bilder/anhang/foot_segment.png, id=263, 1128.215pt x 746.79pt>
+<bilder/anhang/foot_segment.png, id=274, 1128.215pt x 746.79pt>
 File: bilder/anhang/foot_segment.png Graphic file (type png)
 
 <use bilder/anhang/foot_segment.png>
@@ -2154,7 +2166,7 @@ Package babel Info: Redefining ngerman shorthand "~
 [1
 
  <./bilder/anhang/anthrop_Tabelle.png>]
-<bilder/anhang/leg_segment.png, id=270, 882.29625pt x 860.21375pt>
+<bilder/anhang/leg_segment.png, id=281, 882.29625pt x 860.21375pt>
 File: bilder/anhang/leg_segment.png Graphic file (type png)
 
 <use bilder/anhang/leg_segment.png>
@@ -2176,7 +2188,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 89.
 [2 <./bilder/anhang/foot_segment.png> <./bilder/anhang/leg_segment.png>]
-<bilder/anhang/kraftmess.png, id=287, 900.36375pt x 771.88374pt>
+<bilder/anhang/kraftmess.png, id=298, 900.36375pt x 771.88374pt>
 File: bilder/anhang/kraftmess.png Graphic file (type png)
 
 <use bilder/anhang/kraftmess.png>
@@ -2207,21 +2219,11 @@ MaterialMethode.aux)
 ) (./inhalt/Anhang.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
+Package rerunfilecheck Info: File `Praeambel.out' has not changed.
+(rerunfilecheck)             Checksum: 43411CF53AFF76C37536118F181463A1;958.
 
-
-Package rerunfilecheck Warning: File `Praeambel.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Praeambel.out':
-(rerunfilecheck)             Before: F25C2C1E3E96F65E90D84FB7C92B9EDA;873
-(rerunfilecheck)             After:  0D7B22D3C32DB4E1ECDB1EE8CF1EE819;873.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'Praeambel.run.xml'.
 \openout1 = `Praeambel.run.xml'.
@@ -2229,10 +2231,10 @@ Package logreq Info: Writing requests to 'Praeambel.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  ) 
 Here is how much of TeX's memory you used:
- 29508 strings out of 494946
- 541771 string characters out of 6180982
+ 29510 strings out of 494946
+ 541789 string characters out of 6180982
  1095348 words of memory out of 5000000
- 32112 multiletter control sequences out of 15000+600000
+ 32114 multiletter control sequences out of 15000+600000
  77243 words of font info for 52 fonts, out of 8000000 for 9000
  19 hyphenation exceptions out of 8191
  73i,17n,82p,8854b,2329s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2253,10 +2255,10 @@ live/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb>
-Output written on Praeambel.pdf (22 pages, 3139464 bytes).
+Output written on Praeambel.pdf (23 pages, 3140055 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 302 compressed objects within 4 object streams
+ 382 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
  74 named destinations out of 1000 (max. 500000)
- 190 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
