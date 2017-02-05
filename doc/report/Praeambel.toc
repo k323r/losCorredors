@@ -3,48 +3,52 @@
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Notes}{1}{section.1}
+\contentsline {section}{\numberline {1}Einleitung}{2}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Checkliste Inhalt}{2}{section.2}
+\contentsline {section}{\numberline {2}Material und Methoden}{4}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}TODO}{3}{section.3}
+\contentsline {subsection}{\numberline {2.1}Laufbandversuch}{4}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Einleitung}{4}{section.4}
+\contentsline {subsection}{\numberline {2.2}Laufstreckenversuch}{4}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Material und Methoden}{6}{section.5}
+\contentsline {subsection}{\numberline {2.3}Datenauswertung}{5}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Laufbandversuch}{6}{subsection.5.1}
+\contentsline {paragraph}{\nonumberline Rohdatenaufbereitung}{5}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Laufstreckenversuch}{6}{subsubsection.5.1.1}
+\contentsline {paragraph}{\nonumberline Auswertung des Laufbandversuches - mathematisches Pendel}{5}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Datenauswertung}{6}{subsection.5.2}
+\contentsline {paragraph}{\nonumberline Numerische Verfahren}{6}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Rohdatenaufbereitung}{6}{section*.5}
+\contentsline {paragraph}{\nonumberline Vergleich Laufband- und Laufstreckenversuch}{6}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Auswertung des Laufbandversuches - mathematisches Pendel}{7}{section*.6}
+\contentsline {paragraph}{\nonumberline Auswertung des Laufstreckenversuches - inverse Kinetik}{6}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Numerische Verfahren}{7}{section*.8}
+\contentsline {section}{\numberline {3}Ergebnisse}{8}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Vergleich Laufband- und Laufstreckenversuch}{8}{section*.9}
+\contentsline {subsection}{\numberline {3.1}Laufbandversuch}{8}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Auswertung des Laufstreckenversuches - inverse Kinematik}{8}{section*.10}
+\contentsline {subsection}{\numberline {3.2}Laufstreckenversuch}{8}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Ergebnisse}{9}{section.6}
+\contentsline {subsection}{\numberline {3.3}Vergleich Laufband und Laufstrecke}{10}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Laufband}{9}{subsection.6.1}
+\contentsline {section}{\numberline {4}Diskussion}{12}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Vergleich Laufband und Laufstrecke}{9}{subsection.6.2}
+\contentsline {subsection}{\numberline {4.1}Laufbandversuch}{12}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Laufstrecke}{10}{subsection.6.3}
+\contentsline {subsection}{\numberline {4.2}Laufstreckenversuch}{12}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Diskussion}{13}{section.7}
+\contentsline {subsection}{\numberline {4.3}Vergleich Laufband und Laufstrecke}{14}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Laufband}{13}{subsection.7.1}
+\contentsline {section}{\numberline {5}Sonstige Quellen}{17}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Vergleiche Band und Strecke}{13}{subsection.7.2}
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in X-Richtung}{ii}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Laufstreckenversuch}{13}{subsection.7.3}
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in Y-Richtung}{ii}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Literaturverzeichnis}{15}{section.8}
+\contentsline {paragraph}{\nonumberline Momente um Z-Achse}{ii}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Literatur}{15}{section.9}
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in X-Richtung}{ii}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Kr\IeC {\"a}fte in Y-Richtung}{ii}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Momente um Z-Achse}{iii}{section*.31}

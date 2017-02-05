@@ -1,15 +1,15 @@
 [0] Config.pm:354> INFO - This is Biber 2.6
 [0] Config.pm:357> INFO - Logfile is 'Praeambel.blg'
-[23] biber:302> INFO - === Tue Jan 24, 2017, 11:57:38
-[33] Biber.pm:359> INFO - Reading 'Praeambel.bcf'
-[93] Biber.pm:823> INFO - Found 4 citekeys in bib section 0
-[102] Biber.pm:3658> INFO - Processing section 0
-[112] Biber.pm:3828> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[112] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
-[113] bibtex.pm:1282> INFO - Found BibTeX data source 'bibliography.bib'
-[131] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[132] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[132] Biber.pm:3487> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'de-DE'
-[132] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
-[135] bbl.pm:597> INFO - Writing 'Praeambel.bbl' with encoding 'UTF-8'
-[136] bbl.pm:701> INFO - Output to Praeambel.bbl
+[22] biber:302> INFO - === Tue Jan 31, 2017, 17:38:55
+[32] Biber.pm:359> INFO - Reading 'Praeambel.bcf'
+[96] Biber.pm:823> INFO - Found 18 citekeys in bib section 0
+[106] Biber.pm:3658> INFO - Processing section 0
+[116] Biber.pm:3828> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[117] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
+[119] bibtex.pm:1282> INFO - Found BibTeX data source 'bibliography.bib'
+[181] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[182] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[182] Biber.pm:3487> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'de-DE'
+[182] Biber.pm:3493> INFO - No sort tailoring available for locale 'de-DE'
+[196] bbl.pm:597> INFO - Writing 'Praeambel.bbl' with encoding 'UTF-8'
+[198] bbl.pm:701> INFO - Output to Praeambel.bbl

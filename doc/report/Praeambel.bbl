@@ -47,6 +47,374 @@
       \field{pages}{3\bibrangedash 9}
       \range{pages}{7}
     \endentry
+    \entry{alton1998kinematic}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=387bcec399872129118c7ae82702e51a}{%
+           family={Alton},
+           familyi={A\bibinitperiod},
+           given={F},
+           giveni={F\bibinitperiod}}}%
+        {{uniquename=0,hash=e0a8fb9058eca7a9daa828e1c417094a}{%
+           family={Baldey},
+           familyi={B\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod}}}%
+        {{uniquename=0,hash=58014a4758e92628ba6af6ea5b608481}{%
+           family={Caplan},
+           familyi={C\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=99c51c5b8cc326f05390eaf1c37d420f}{%
+           family={Morrissey},
+           familyi={M\bibinitperiod},
+           given={MC},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{9e007fbb1e15467f34e06ee35c7fa900}
+      \strng{fullhash}{604d4ccf53cf9055147b244e61e0cfb4}
+      \strng{authornamehash}{9e007fbb1e15467f34e06ee35c7fa900}
+      \strng{authorfullhash}{604d4ccf53cf9055147b244e61e0cfb4}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Clinical Biomechanics}
+      \field{number}{6}
+      \field{title}{A kinematic comparison of overground and treadmill walking}
+      \field{volume}{13}
+      \field{year}{1998}
+      \field{pages}{434\bibrangedash 440}
+      \range{pages}{7}
+    \endentry
+    \entry{barbareschi2015statically}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=44d95b54adf47d6b14045abcf6f2d9ad}{%
+           family={Barbareschi},
+           familyi={B\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod}}}%
+        {{uniquename=0,hash=2e1ce98112f9593e174c11e123529f38}{%
+           family={Richards},
+           familyi={R\bibinitperiod},
+           given={Rosie},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=9df215831af00d96774844880695a1cd}{%
+           family={Thornton},
+           familyi={T\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=d26f0396a7f0024361075fe50fd1ef85}{%
+           family={Carlson},
+           familyi={C\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=8af06703d11e38514a4ac8f1fab02c34}{%
+           family={Holloway},
+           familyi={H\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8069d30c28f61aa66a18220e4adcea51}
+      \strng{fullhash}{aa46eb52ecd66e66e583f8a9a3261307}
+      \strng{authornamehash}{8069d30c28f61aa66a18220e4adcea51}
+      \strng{authorfullhash}{aa46eb52ecd66e66e583f8a9a3261307}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Engineering in Medicine and Biology Society (EMBC), 2015 37th Annual International Conference of the IEEE}
+      \field{title}{Statically vs dynamically balanced gait: Analysis of a robotic exoskeleton compared with a human}
+      \field{year}{2015}
+      \field{pages}{6728\bibrangedash 6731}
+      \range{pages}{4}
+    \endentry
+    \entry{cavagna2000role}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=1,hash=76704af80f61d89b35e927f8a15140d5}{%
+           family={Cavagna},
+           familyi={C\bibinitperiod},
+           given={GA},
+           giveni={G\bibinitperiod}}}%
+        {{uniquename=0,hash=f1d695934fbec8f254fb43f19b98f819}{%
+           family={Willems},
+           familyi={W\bibinitperiod},
+           given={PA},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=e89b86664cf87de821bd84ea7828454a}{%
+           family={Heglund},
+           familyi={H\bibinitperiod},
+           given={NC},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{39ee2db14e031933b0e09a818b28cf98}
+      \strng{fullhash}{39ee2db14e031933b0e09a818b28cf98}
+      \strng{authornamehash}{39ee2db14e031933b0e09a818b28cf98}
+      \strng{authorfullhash}{39ee2db14e031933b0e09a818b28cf98}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Physiology}
+      \field{number}{3}
+      \field{title}{The role of gravity in human walking: pendular energy exchange, external work and optimal speed}
+      \field{volume}{528}
+      \field{year}{2000}
+      \field{pages}{657\bibrangedash 668}
+      \range{pages}{12}
+    \endentry
+    \entry{cavagna1976sources}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=2,hash=29882bc703226ca5ca12db80b4c08961}{%
+           family={Cavagna},
+           familyi={C\bibinitperiod},
+           given={Giovanni\bibnamedelima A},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=da3e2cb0263e60279da24209279d7da0}{%
+           family={Thys},
+           familyi={T\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=1365f874244c7efd1d51757bbaa0564e}{%
+           family={Zamboni},
+           familyi={Z\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Blackwell}%
+      }
+      \strng{namehash}{b271c1626f28d3b6914ac79634f2efcd}
+      \strng{fullhash}{b271c1626f28d3b6914ac79634f2efcd}
+      \strng{authornamehash}{b271c1626f28d3b6914ac79634f2efcd}
+      \strng{authorfullhash}{b271c1626f28d3b6914ac79634f2efcd}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of physiology}
+      \field{number}{3}
+      \field{title}{The sources of external work in level walking and running.}
+      \field{volume}{262}
+      \field{year}{1976}
+      \field{pages}{639}
+      \range{pages}{1}
+    \endentry
+    \entry{groote2008kalman}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=171addd085809fc5b5caf6cf5d5cd007}{%
+           family={De\bibnamedelima Groote},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Friedl},
+           giveni={F\bibinitperiod}}}%
+        {{uniquename=0,hash=48fb5c2f23d0d83879725ea5999c95f2}{%
+           family={De\bibnamedelima Laet},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Tinne},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=dee59e4a4ddc7d93dff1033f75fb1bd4}{%
+           family={Jonkers},
+           familyi={J\bibinitperiod},
+           given={Ilse},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=4a7923b7454088a30f379e9734c6a46a}{%
+           family={De\bibnamedelima Schutter},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Joris},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fac412673a0a183172deffa316ad2dee}
+      \strng{fullhash}{0edd0deb07830449ac639ca219faabf1}
+      \strng{authornamehash}{fac412673a0a183172deffa316ad2dee}
+      \strng{authorfullhash}{0edd0deb07830449ac639ca219faabf1}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of biomechanics}
+      \field{number}{16}
+      \field{title}{Kalman smoothing improves the estimation of joint kinematics and kinetics in marker-based human gait analysis}
+      \field{volume}{41}
+      \field{year}{2008}
+      \field{pages}{3390\bibrangedash 3398}
+      \range{pages}{9}
+    \endentry
+    \entry{eng1995kinetic}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=58733942021a5bb184b4b08e4d66b56e}{%
+           family={Eng},
+           familyi={E\bibinitperiod},
+           given={Janice\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=7cd75795afa50c70be79f2d06686a2ea}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f2bcafe65a041b10582587fb61e88975}
+      \strng{fullhash}{f2bcafe65a041b10582587fb61e88975}
+      \strng{authornamehash}{f2bcafe65a041b10582587fb61e88975}
+      \strng{authorfullhash}{f2bcafe65a041b10582587fb61e88975}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of biomechanics}
+      \field{number}{6}
+      \field{title}{Kinetic analysis of the lower limbs during walking: what information can be gained from a three-dimensional model?}
+      \field{volume}{28}
+      \field{year}{1995}
+      \field{pages}{753\bibrangedash 758}
+      \range{pages}{6}
+    \endentry
+    \entry{kirtley1985influence}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=5bae612a869bf12055e0511048ea4256}{%
+           family={Kirtley},
+           familyi={K\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=43921b77dbaebc4dccd419a9fff6467a}{%
+           family={Whittle},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima W},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{uniquename=0,hash=bafd74693f603132da7b1e5fed8826ef}{%
+           family={Jefferson},
+           familyi={J\bibinitperiod},
+           given={RJ},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c49faa1c60fa782b8b2aab1ab4804272}
+      \strng{fullhash}{c49faa1c60fa782b8b2aab1ab4804272}
+      \strng{authornamehash}{c49faa1c60fa782b8b2aab1ab4804272}
+      \strng{authorfullhash}{c49faa1c60fa782b8b2aab1ab4804272}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of biomedical engineering}
+      \field{number}{4}
+      \field{title}{Influence of walking speed on gait parameters}
+      \field{volume}{7}
+      \field{year}{1985}
+      \field{pages}{282\bibrangedash 288}
+      \range{pages}{7}
+    \endentry
+    \entry{kuo2007six}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=852e13dba428da719afcfac422cfb652}{%
+           family={Kuo},
+           familyi={K\bibinitperiod},
+           given={Arthur\bibnamedelima D},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{852e13dba428da719afcfac422cfb652}
+      \strng{fullhash}{852e13dba428da719afcfac422cfb652}
+      \strng{authornamehash}{852e13dba428da719afcfac422cfb652}
+      \strng{authorfullhash}{852e13dba428da719afcfac422cfb652}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Human movement science}
+      \field{number}{4}
+      \field{title}{The six determinants of gait and the inverted pendulum analogy: A dynamic walking perspective}
+      \field{volume}{26}
+      \field{year}{2007}
+      \field{pages}{617\bibrangedash 656}
+      \range{pages}{40}
+    \endentry
+    \entry{lay2006effects}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=31f94f589ae16d15a8e2286c71a1ddb0}{%
+           family={Lay},
+           familyi={L\bibinitperiod},
+           given={Andrea\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{uniquename=0,hash=2fd94d5b08a1015a0bdacefdb813561b}{%
+           family={Hass},
+           familyi={H\bibinitperiod},
+           given={Chris\bibnamedelima J},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=d39342ad629f3431120ea3b05fda6b4b}{%
+           family={Gregor},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima J},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{3d98290edffa1e0730da2bc063462674}
+      \strng{fullhash}{3d98290edffa1e0730da2bc063462674}
+      \strng{authornamehash}{3d98290edffa1e0730da2bc063462674}
+      \strng{authorfullhash}{3d98290edffa1e0730da2bc063462674}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of biomechanics}
+      \field{number}{9}
+      \field{title}{The effects of sloped surfaces on locomotion: a kinematic and kinetic analysis}
+      \field{volume}{39}
+      \field{year}{2006}
+      \field{pages}{1621\bibrangedash 1628}
+      \range{pages}{8}
+    \endentry
+    \entry{mcmahon1984muscles}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=7a57c86a2e1338208e91eb7c373265b5}{%
+           family={McMahon},
+           familyi={M\bibinitperiod},
+           given={Thomas\bibnamedelima A},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{7a57c86a2e1338208e91eb7c373265b5}
+      \strng{fullhash}{7a57c86a2e1338208e91eb7c373265b5}
+      \strng{authornamehash}{7a57c86a2e1338208e91eb7c373265b5}
+      \strng{authorfullhash}{7a57c86a2e1338208e91eb7c373265b5}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Muscles, reflexes, and locomotion}
+      \field{year}{1984}
+    \endentry
     \entry{meijering2012methods}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -84,7 +452,40 @@
       \field{pages}{183\bibrangedash 200}
       \range{pages}{18}
     \endentry
-    \entry{perry1992gait}{book}{}
+    \entry{mochon1980ballistic}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=4529a9f3972fe04365f6a44bbe30e38f}{%
+           family={Mochon},
+           familyi={M\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=7a57c86a2e1338208e91eb7c373265b5}{%
+           family={McMahon},
+           familyi={M\bibinitperiod},
+           given={Thomas\bibnamedelima A},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{17d860306bc0599c4e3cbb58aa8d3e37}
+      \strng{fullhash}{17d860306bc0599c4e3cbb58aa8d3e37}
+      \strng{authornamehash}{17d860306bc0599c4e3cbb58aa8d3e37}
+      \strng{authorfullhash}{17d860306bc0599c4e3cbb58aa8d3e37}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of biomechanics}
+      \field{number}{1}
+      \field{title}{Ballistic walking}
+      \field{volume}{13}
+      \field{year}{1980}
+      \field{pages}{49\bibrangedash 57}
+      \range{pages}{9}
+    \endentry
+    \entry{perry2010gait}{book}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=7dc5c327b662da16f052d05fa4fdc77b}{%
            family={Perry},
@@ -98,7 +499,7 @@
            giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Slack Thorofare, NJ}%
+        {Slack Thorofare, USA}%
       }
       \strng{namehash}{466920f09a9423b63d516a334b84aae6}
       \strng{fullhash}{466920f09a9423b63d516a334b84aae6}
@@ -109,7 +510,94 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Gait analysis: normal and pathological function}
+      \field{title}{Gait analysis: Normal and Pathological Function}
+      \field{year}{2010}
+    \endentry
+    \entry{pontzer2009control}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=51b58fc0a0548162bf0e78d686a96084}{%
+           family={Pontzer},
+           familyi={P\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=a0ba2f33275b52d18624b677c4fbcb48}{%
+           family={Holloway},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{uniquename=0,hash=4f6fd8b87af90d05acc9a53d0a67aafa}{%
+           family={Raichlen},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=fdf3a7a77a4fd67364c14cac3ac7ba62}{%
+           family={Lieberman},
+           familyi={L\bibinitperiod},
+           given={Daniel\bibnamedelima E},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Company of Biologists Ltd}%
+      }
+      \strng{namehash}{bf7da3ee46671f0fcc4ad95db8a2bf1d}
+      \strng{fullhash}{13860cc2db5211bc17d67f9b2731bd8c}
+      \strng{authornamehash}{bf7da3ee46671f0fcc4ad95db8a2bf1d}
+      \strng{authorfullhash}{13860cc2db5211bc17d67f9b2731bd8c}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Experimental Biology}
+      \field{number}{4}
+      \field{title}{Control and function of arm swing in human walking and running}
+      \field{volume}{212}
+      \field{year}{2009}
+      \field{pages}{523\bibrangedash 534}
+      \range{pages}{12}
+    \endentry
+    \entry{winter2009biomechanics}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=7cd75795afa50c70be79f2d06686a2ea}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{7cd75795afa50c70be79f2d06686a2ea}
+      \strng{fullhash}{7cd75795afa50c70be79f2d06686a2ea}
+      \strng{authornamehash}{7cd75795afa50c70be79f2d06686a2ea}
+      \strng{authorfullhash}{7cd75795afa50c70be79f2d06686a2ea}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Biomechanics and motor control of human movement}
+      \field{year}{2009}
+    \endentry
+    \entry{witte1992mechanische}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=25265c3c0f2e6a07725e114a6372959e}{%
+           family={Witte},
+           familyi={W\bibinitperiod},
+           given={Hartmut},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{25265c3c0f2e6a07725e114a6372959e}
+      \strng{fullhash}{25265c3c0f2e6a07725e114a6372959e}
+      \strng{authornamehash}{25265c3c0f2e6a07725e114a6372959e}
+      \strng{authorfullhash}{25265c3c0f2e6a07725e114a6372959e}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Über mechanische Einflüsse auf die Gestalt des menschlichen Körpers}
+      \field{type}{phdthesis}
       \field{year}{1992}
     \endentry
     \entry{wren2011efficacy}{article}{}
