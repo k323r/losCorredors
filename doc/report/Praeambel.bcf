@@ -91,11 +91,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>2</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -2150,25 +2150,27 @@
     <bcf:citekey order="5">barbareschi2015statically</bcf:citekey>
     <bcf:citekey order="6">perry2010gait</bcf:citekey>
     <bcf:citekey order="7">perry2010gait</bcf:citekey>
-    <bcf:citekey order="8">mochon1980ballistic</bcf:citekey>
-    <bcf:citekey order="9">witte1992mechanische</bcf:citekey>
-    <bcf:citekey order="10">kuo2007six</bcf:citekey>
-    <bcf:citekey order="11">winter2009biomechanics</bcf:citekey>
-    <bcf:citekey order="12">meijering2012methods</bcf:citekey>
-    <bcf:citekey order="13">winter2009biomechanics</bcf:citekey>
-    <bcf:citekey order="14">witte1992mechanische</bcf:citekey>
-    <bcf:citekey order="15">mcmahon1984muscles</bcf:citekey>
-    <bcf:citekey order="16">witte1992mechanische</bcf:citekey>
-    <bcf:citekey order="17">cavagna1976sources</bcf:citekey>
-    <bcf:citekey order="18">cavagna2000role</bcf:citekey>
-    <bcf:citekey order="19">perry2010gait</bcf:citekey>
+    <bcf:citekey order="8">perry2010gait</bcf:citekey>
+    <bcf:citekey order="9">mochon1980ballistic</bcf:citekey>
+    <bcf:citekey order="10">witte1992mechanische</bcf:citekey>
+    <bcf:citekey order="11">kuo2007six</bcf:citekey>
+    <bcf:citekey order="12">winter2009biomechanics</bcf:citekey>
+    <bcf:citekey order="13">meijering2012methods</bcf:citekey>
+    <bcf:citekey order="14">winter2009biomechanics</bcf:citekey>
+    <bcf:citekey order="15">witte1992mechanische</bcf:citekey>
+    <bcf:citekey order="16">mcmahon1984muscles</bcf:citekey>
+    <bcf:citekey order="17">witte1992mechanische</bcf:citekey>
+    <bcf:citekey order="18">cavagna1976sources</bcf:citekey>
+    <bcf:citekey order="19">cavagna2000role</bcf:citekey>
     <bcf:citekey order="20">perry2010gait</bcf:citekey>
-    <bcf:citekey order="21">kirtley1985influence</bcf:citekey>
+    <bcf:citekey order="21">perry2010gait</bcf:citekey>
     <bcf:citekey order="22">perry2010gait</bcf:citekey>
-    <bcf:citekey order="23">perry2010gait</bcf:citekey>
+    <bcf:citekey order="23">kirtley1985influence</bcf:citekey>
     <bcf:citekey order="24">perry2010gait</bcf:citekey>
-    <bcf:citekey order="25">eng1995kinetic</bcf:citekey>
+    <bcf:citekey order="25">perry2010gait</bcf:citekey>
+    <bcf:citekey order="26">eng1995kinetic</bcf:citekey>
     <bcf:citekey order="26">lay2006effects</bcf:citekey>
+    <bcf:citekey order="26">perry2010gait</bcf:citekey>
     <bcf:citekey order="27">barbareschi2015statically</bcf:citekey>
     <bcf:citekey order="28">pontzer2009control</bcf:citekey>
     <bcf:citekey order="29">pontzer2009control</bcf:citekey>
@@ -2176,7 +2178,8 @@
     <bcf:citekey order="31">alton1998kinematic</bcf:citekey>
     <bcf:citekey order="32">groote2008kalman</bcf:citekey>
     <bcf:citekey order="33">barbareschi2015statically</bcf:citekey>
-    <bcf:citekey order="34">winter2009biomechanics</bcf:citekey>
+    <bcf:citekey order="34">yin2012emg</bcf:citekey>
+    <bcf:citekey order="35">winter2009biomechanics</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

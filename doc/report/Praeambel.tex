@@ -34,7 +34,14 @@
 \usepackage{capt-of,todonotes, import, setspace,comment, url, eurosym, pdflscape,scrpage2, }
 
 
-\usepackage[style=authoryear]{biblatex}
+\usepackage[
+	style = authoryear,
+	backend = biber,
+	sorting = nyt,
+	maxbibnames = 99,
+	maxcitenames = 2,
+%	bibstyle = mybibstyle
+]{biblatex}
 \addbibresource{bibliography.bib}
 
 \hypersetup{pageanchor=false}
@@ -84,6 +91,10 @@
 \setcounter{page}{1}
 
 \begin{abstract}
+	Der menschliche Gang ist immer noch nicht vollständig verstanden, bietet Forschungspotential für medizinische Forschung und ist interessant für Laufroboter und Exoskelette.\\
+	Um das menschliche Gehen beispielhaft zu untersuchen werden Trajektorien von neun Gelenken und Bodenreaktionskräfte aufgenommen. Die Ergebnisse werden mit einem inversen Pendel und einem Gravitationspendel verglichen. Der Einfluss von Laufband und Laufstrecke auf das Gehen wird anhand der Handtrajektorie, des Körperachsen-Winkels und des Knie-Flexions-Winkels verglichen. Kräfte und Momente in Knöchel, Knie und Hüfte werden mittels inverser Kinematik berechnet.\\
+	Beide Pendelmodelle ergaben die größte Übereinstimmung mit Gehen bei 2~km~h$^{-1}$, die geringster Anstrengung wurde jedoch bei 3~km~h$^{-1}$ empfunden. Auf dem Laufband ist die Hand-Amplitude größer und der Körper weiter zurück gelehnt als auf der Laufstrecke. Der Knie-Flexions-Winkel zeigt keine merkliche Veränderung in der Standphase. 
+	
 	Der Gang eines Probanden wird auf dem Laufband und der Laufstrecke untersucht. 
 	EINLEITUNG\\
 	ERGEBNISSE\\
@@ -95,14 +106,24 @@
 \include{inhalt/MaterialMethode}
 \include{inhalt/Ergebnisse}
 \include{inhalt/Diskussion}
-\include{inhalt/FazitAusblick}
+%\include{inhalt/FazitAusblick}
 
 
 \begin{spacing}{1}
 %\thispagestyle{plain}
 \pagestyle{scrheadings}
 \ohead{Literaturverzeichnis}
-\printbibliography
+
+
+\renewbibmacro{in:}{}
+
+\renewcommand{\mkbibnamefirst}[1]{\textsc{#1}}
+\renewcommand{\mkbibnamelast}[1]{\textsc{#1}}
+\renewcommand{\mkbibnameprefix}[1]{\textsc{#1}}
+\renewcommand{\mkbibnameaffix}[1]{\textsc{#1}}
+\section{Literaturverzeichnis}
+\vspace{-29pt}
+\printbibliography[title={ .}]
 \section{Sonstige Quellen}
 \textbf{Owsianowski, N. (2016):} Skript zur Datenauswertung der kinematischen und kinetischen Experimente der terrestrischen Lokomotion. HS Bremen.
 \end{spacing}
